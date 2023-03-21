@@ -1,21 +1,54 @@
+<!DOCTYPE html>
 <html>
-   <head>
-      <title>Selector Example</title>
-      <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-      <link rel="stylesheet" href="./style.css">
-      <script>
-       $(document).ready(function(){
-           $("#tpoint").attr("name","tanvir");
-         });
-      </script>
-   </head>
-   <body>
-      <form name="123" method="POST" data-netlify="true" 
-      data-netlify-honeypot="bot-field" action="/Download"
-       onSubmit="submit" id="tpoint">
-       <label for="ORDER">&nbsp;ORDER</label>
-       <h6><input type="text" class="form-control" id="ORDER" name="ORDER" ></h6>
-<CENTER><button type="submit" class="btn btn-primary mt-3" >Send sabbir</button> </CENTER>  
-</form>
-   </body>
+<head>
+	<title>Online Shop</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<header>
+		<nav>
+			<ul>
+				<li><a href="#">Home</a></li>
+				<li><a href="#">Shop</a></li>
+				<li><a href="#">Contact</a></li>
+			</ul>
+			<form>
+				<input type="text" placeholder="Search...">
+				<button type="submit">Search</button>
+			</form>
+		</nav>
+	</header>
+	<main>
+		<h1>Featured Products</h1>
+		<div class="products">
+			<div class="product">
+				<img src="product1.jpg" alt="Product 1">
+				<h3>Product 1</h3>
+				<p>$19.99</p>
+				<button>Add to Cart</button>
+			</div>
+			<div class="product">
+				<img src="product2.jpg" alt="Product 2">
+				<h3>Product 2</h3>
+				<p>$29.99</p>
+				<button>Add to Cart</button>
+			</div>
+			<div class="product">
+				<img src="product3.jpg" alt="Product 3">
+				<h3>Product 3</h3>
+				<p>$39.99</p>
+				<button>Add to Cart</button>
+			</div>
+			<div class="product">
+				<img src="product4.jpg" alt="Product 4">
+				<h3>Product 4</h3>
+				<p>$49.99</p>
+				<button>Add to Cart</button>
+			</div>
+		</div>
+	</main>
+	<footer>
+		<p>&copy; 2023 Online Shop</p>
+	</footer>
+</body>
 </html>
