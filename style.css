@@ -98,3 +98,47 @@ background-color: #42445A00;
 border: none;
 outline: none;
 }
+
+
+
+
+body {
+  display: grid;
+  grid-template-rows: auto 48px;
+  height: 100vh;
+}
+
+ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+li {
+  list-style-type: none;
+  cursor: pointer;
+}
+
+main {
+  background-color: lightgray;
+}
+
+img {
+  max-width: 80%;
+  max-height: 70vh;
+}
+
+.page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.active {
+  text-decoration: underline;
+}
