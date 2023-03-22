@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Chat Application</title>
+	<style>
+		.chat {
+			display: flex;
+			height: 100vh;
+			align-items: center;
+			justify-content: center;
+		}
+		.chat .users {
+			width: 200px;
+			height: 100%;
+			background-color: #F0F0F0;
+			padding: 20px;
+		}
+		.chat .messages {
+			flex: 1;
+			height: 100%;
+			background-color: #FFFFFF;
+			padding: 20px;
+			overflow-y: scroll;
+		}
+		.chat .users li {
+			cursor: pointer;
+			margin-bottom: 10px;
+			padding: 10px;
+			background-color: #FFFFFF;
+			border-radius: 5px;
+		}
+		.chat .users li.active {
+			background-color: #A9A9A9;
+			color: #FFFFFF;
+		}
+	</style>
+</head>
+<body>
+	<div class="chat">
+		<div class="users">
+			<ul>
+				<li class="active">User 1</li>
+				<li>User 2</li>
+				<li>User 3</li>
+				<li>User 4</li>
+				<li>User 5</li>
+			</ul>
+		</div>
+		<div class="messages">
+			<h2>Welcome to the Chat App</h2>
+			<p>Select a user to start chatting.</p>
+		</div>
+	</div>
+	<script>
+		// Get the list of users
+		var users = document.querySelectorAll('.users li');
+
+		// Loop through the users and add a click event listener
+		for (var i = 0; i < users.length; i++) {
+			users[i].addEventListener('click', function() {
+				// Remove the 'active' class from all users
+				for (var j = 0; j < users.length; j++) {
+					users[j].classList.remove('active');
+				}
+				// Add the 'active' class to the clicked user
+				this.classList.add('active');
+
+				// Update the messages div with the chat history for the selected user
+				var messages = document.querySelector('.messages');
+				messages.innerHTML = '<h2>Chat history for ' + this.innerText + '</h2>';
+			});
+		}
+	</script>
+</body>
+</html>
