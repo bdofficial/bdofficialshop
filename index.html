@@ -1,129 +1,44 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" >
 <head>
-	<title>Shopping Cart Example</title>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<style>
-		.product {
-			display: inline-block;
-			border: 1px solid #ccc;
-			padding: 10px;
-			margin: 10px;
-			text-align: center;
-		}
-		.product img {
-			max-width: 100%;
-			max-height: 100px;
-			margin-bottom: 10px;
-		}
-		.cart {
-			position: fixed;
-			top: 0;
-			right: 0;
-			padding: 10px;
-			background-color: #f1f1f1;
-			border: 1px solid #ccc;
-			box-shadow: 0 2px 2px rgba(0,0,0,0.2);
-			display: none;
-		}
-		.cart-item {
-			display: flex;
-			align-items: center;
-			margin-bottom: 10px;
-		}
-		.cart-item img {
-			max-width: 50px;
-			max-height: 50px;
-			margin-right: 10px;
-		}
-	</style>
+ <meta charset="UTF-8">
+ <meta name="color-scheme"content="dark">
+ <title>CodePen - Bottom navigation interaction</title>
+ <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Poppins:500" rel="stylesheet"><link rel="stylesheet" href="./style.css">
+
 </head>
 <body>
-	<h1>Shopping Cart Example</h1>
-	<div class="product">
-		<img src="product1.jpg" alt="Product 1">
-		<h3>Product 1</h3>
-		<p>$9.99</p>
-		<button onclick="addItemToCart('Product 1', 9.99, 'product1.jpg')">Add to Cart</button>
-	</div>
-	<div class="product">
-		<img src="product2.jpg" alt="Product 2">
-		<h3>Product 2</h3>
-		<p>$19.99</p>
-		<button onclick="addItemToCart('Product 2', 19.99, 'product2.jpg')">Add to Cart</button>
-	</div>
-	<button onclick="viewCart()">View Cart</button>
-	<div class="cart">
-		<h2>Cart Items:</h2>
-		<div id="cart-items"></div>
-		<p>Total: <span id="cart-total"></span></p>
-		<button onclick="closeCart()">Close Cart</button>
-	</div>
-<script >
-		  // Define cart array
-		  var cartItems = [];
-		
-		// Add item to cart function
-		function addItemToCart(itemName, itemPrice, itemImage) {
-		  var item = {
-		    name: itemName,
-		    price: itemPrice,
-		    image: itemImage
-		  };
-		  cartItems.push(item);
-		  updateCart();
-		}
-		
-		// View cart function
-		function viewCart() {
-		  // Get cart element
-		  var cart = document.querySelector('.cart');
-		  // Show cart
-		  cart.style.display = 'block';
-		  // Update cart items
-		  updateCart();
-		}
-		
-		// Close cart function
-		function closeCart() {
-		  // Get cart element
-		  var cart = document.querySelector('.cart');
-		  // Hide cart
-		  cart.style.display = 'none';
-		}
-		
-		// Update cart function
-		function updateCart() {
-		  // Get cart items element
-		  var cartItemsElement = document.querySelector('#cart-items');
-		  // Get cart total element
-		  var cartTotalElement = document.querySelector('#cart-total');
-		  // Reset cart items element
-		  cartItemsElement.innerHTML = '';
-		  // Calculate cart total
-		  var cartTotal = 0;
-		  // Loop through cart items
-		  for (var i = 0; i < cartItems.length; i++) {
-		    // Get item
-		    var item = cartItems[i];
-		    // Add item to cart items element
-		    var cartItemElement = document.createElement('div');
-		    cartItemElement.classList.add('cart-item');
-		    cartItemElement.innerHTML = `
-							<img src="${item.image}" alt="${item.name}">
-							<div>
-								<p>${item.name}</p>
-								<p>$${item.price.toFixed(2)}</p>
-							</div>
-						`;
-		    cartItemsElement.appendChild(cartItemElement);
-		    // Add item price to cart total
-		    cartTotal += item.price;
-		  }
-		  // Update cart total element
-		  cartTotalElement.textContent = '$' + cartTotal.toFixed(2);
-		}
-		</script> 
-		</body> 
-		</html>
+<!-- partial:index.partial.html -->
+<div class="nav">
+  <div class="nav-item active">
+     <i class="material-icons home-icon">
+          👕
+      </i>
+      <input class="nav-text" placeholder="Search"/>
+  </div>
+  <div class="nav-item">
+      <i class="material-icons search-icon">
+        🛒
+      </i>
+      <input class="nav-text"placeholder="Order"/>
+  </div>
+  <div class="nav-item">
+      <i class="material-icons favorite-icon">
+       💬
+      </i>
+      <input class="nav-text"placeholder="Message"/>
+  </div>
+  <div class="nav-item">
+      <i class="material-icons person-icon">
+          👤
+      </i>
+      <input type="button" class="nav-text"value="SAVE"/>
+  </div>
+</div>
+<!-- partial -->
+  <script  src="./script.js"></script>
+</body>
+</html>
+
