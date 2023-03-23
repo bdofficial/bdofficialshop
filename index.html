@@ -12,22 +12,25 @@ rel="stylesheet">
 <body>
     <section id="section-1" class="page">
 	<div id="products">
-	  <li>Apple</li>
-	  <li>Orange</li>
-	  <li>Banana</li>
-	  <li>Grape</li>
-	  <li>Watermelon</li>
-	  <li>Pineapple</li>
-	  <li>Mango</li>
+  <li onclick="addItem1()">Apple</li>
+  <li onclick="addItem2()">Orange</li>
+	<li onclick="addItem3()">Banana</li>
+	<li onclick="addItem4()">Grape</li>
+ <li onclick="addItem5()">Watermelon</li>
+	<li onclick="addItem6()">Pineapple</li>
+	<li onclick="addItem7()">Mango</li>
 	</div>
 </section>
   
   <section id="section-2" class="hidden page">
-    	  <li>Apple</li>
-sbiir</section>
+    <textarea  style="text-align: center;color: blue; background-color: yellowgreen;font-size: 3rem" id="myList"></textarea>
+  </section>
   
   <section id="section-3" class="hidden page">
-md roman</section>
+
+<textarea style="text-align: center;color: red; background-color: yellowgreen;font-size: 3rem"  id="outputTextarea"></textarea>
+
+</section>
   <section id="section-4" class="hidden page">
     sumaia</section>
 <!-- partial:index.partial.html -->
@@ -36,19 +39,19 @@ md roman</section>
      <i data-target="section-1" class="active material-icons home-icon">
           👕
       </i>
-      <input type="search" onsearch="filterProducts()" id="search" class="nav-text" placeholder="Search"/>
+      <input type="search" oninput="filterProducts()" id="search" class="nav-text" placeholder="Search"/>
   </div>
   <div class="nav-item">
       <i data-target="section-2" class="material-icons search-icon">
         🛒
       </i>
-      <input class="nav-text"placeholder="Order"/>
+      <input onclick="copyTextarea()" type="button"class="nav-text"value="ORDER"/>
   </div>
   <div class="nav-item">
       <i data-target="section-3" class="material-icons favorite-icon">
        💬
-      </i>
-      <input class="nav-text"placeholder="Message"/>
+      </i><form class="nav-text">
+      <input id="my-input" style="color: red;text-align: center" placeholder="Message"/></form>
   </div>
   <div class="nav-item">
       <i data-target="section-4" class="material-icons person-icon">

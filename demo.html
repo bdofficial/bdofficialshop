@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+</head>
+
+<body>
+  <div id="myList">
+  <li onclick="addItem()">Item 1</li>
+  <li>Item 2</li>
+</div>
+
+<script>
+  function addItem() {
+    const myList = document.querySelector("#myList");
+    const newLi = document.createElement("li");
+    newLi.innerHTML = "Item 3";
+    myList.appendChild(newLi);
+  }
+</script>
+
+
+</body>
+
+</html>

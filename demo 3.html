@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+</head>
+
+<body>
+  <textarea id="inputTextarea"></textarea>
+<textarea id="outputTextarea"></textarea>
+<button onclick="copyTextarea()">Copy</button>
+<script>
+  function copyTextarea() {
+  var input = document.getElementById("inputTextarea").value;
+  document.getElementById("outputTextarea").value = input;
+}
+
+</script>
+
+</body>
+
+</html>

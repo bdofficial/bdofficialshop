@@ -1,3 +1,22 @@
+  const myInput = document.getElementById('my-input');
+  const myTextarea = document.getElementById('outputTextarea');
+  
+  document.querySelector('form').addEventListener('submit', (event) => {
+    event.preventDefault(); // prevent form submission
+    myTextarea.value += myInput.value+"\n";
+    myInput.value = '';
+  });
+
+
+function copyTextarea() {
+  var input = document.getElementById("myList").value;
+  document.getElementById("outputTextarea").value += input;
+}
+
+
+
+
+
 const navItems = document.getElementsByClassName('nav-item');
 
 for (let i = 0; i < navItems.length; i++) {
@@ -50,3 +69,31 @@ function filterProducts() {
     }
   }
 }
+
+
+  function addItem1() {
+    document.querySelector("#myList").innerHTML += "Apple"+"\n";
+  }
+  function addItem2() {
+    document.querySelector("#myList").innerHTML += "Orange"+"\n";
+  }
+  function addItem3() {
+    document.querySelector("#myList").innerHTML += "Banana"+"\n";
+  }
+  function addItem4() {
+    document.querySelector("#myList").innerHTML += "Grape"+"\n";
+  }
+  function addItem5() {
+    document.querySelector("#myList").innerHTML += "Watermelon"+"\n";
+  }
+  function addItem6() {
+    document.querySelector("#myList").innerHTML += "Pineapple"+"\n";
+  }
+  function addItem7() {
+    document.querySelector("#myList").innerHTML += "Mango"+"\n";
+  }
+  
+  
+  
+  
+  
