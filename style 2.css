@@ -1,10 +1,11 @@
 body {
     display: flex;
-    align-items: center;
-    background-color: black;
-    font-family: 'Poppins', sans-serif;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #311740;
+  font-family: 'Poppins', sans-serif;
 }
-
 .nav {
     display: flex;
     flex-direction: row;
@@ -140,5 +141,4 @@ img {
 .active {
   text-decoration: underline;
 }
-
 

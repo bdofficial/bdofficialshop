@@ -72,25 +72,25 @@ function filterProducts() {
 
 
   function addItem1() {
-    document.querySelector("#myList").innerHTML += "Apple"+"\n";
+    document.querySelector("#myList").innerHTML += "SHOES"+"\n";
   }
   function addItem2() {
-    document.querySelector("#myList").innerHTML += "Orange"+"\n";
+    document.querySelector("#myList").innerHTML += "CLOTHES"+"\n";
   }
   function addItem3() {
-    document.querySelector("#myList").innerHTML += "Banana"+"\n";
+    document.querySelector("#myList").innerHTML += "ACCESSORIES"+"\n";
   }
   function addItem4() {
-    document.querySelector("#myList").innerHTML += "Grape"+"\n";
+    document.querySelector("#myList").innerHTML += "SARI"+"\n";
   }
   function addItem5() {
-    document.querySelector("#myList").innerHTML += "Watermelon"+"\n";
+    document.querySelector("#myList").innerHTML += "THREE-PICE"+"\n";
   }
   function addItem6() {
-    document.querySelector("#myList").innerHTML += "Pineapple"+"\n";
+    document.querySelector("#myList").innerHTML += "PANJABI"+"\n";
   }
   function addItem7() {
-    document.querySelector("#myList").innerHTML += "Mango"+"\n";
+    document.querySelector("#myList").innerHTML += "SARWANI"+"\n";
   }
   
   
