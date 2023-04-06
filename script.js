@@ -1,3 +1,11 @@
+///////////iframe
+    function submitMessage() {
+      const iframe = document.getElementById('chat-iframe');
+      const message = document.getElementById('my-input').value;
+      iframe.contentWindow.postMessage({ message }, '*');
+      document.getElementById('my-input').value = " ";
+    }
+////////////
   const myInput = document.getElementById('my-input');
   const myTextarea = document.getElementById('outputTextarea');
   
@@ -6,17 +14,17 @@
     myTextarea.value += myInput.value+"\n";
     myInput.value = '';
   });
-
+///////
 
 function copyTextarea() {
   var input = document.getElementById("myList").value;
   document.getElementById("outputTextarea").value += input;
 }
+/////
 
 
 
-
-
+/////
 const navItems = document.getElementsByClassName('nav-item');
 
 for (let i = 0; i < navItems.length; i++) {

@@ -25,11 +25,9 @@ rel="stylesheet">
   <section id="section-2" class="hidden page">
     <textarea  style="text-align: center;color: blue; background-color: yellowgreen;font-size: 3rem;padding-bottom: 10rem" id="myList"></textarea>
   </section>
-  
-  <section id="section-3" class="hidden page">
-
-<textarea style="text-align: center;color: red; background-color: yellowgreen;font-size: 3rem;padding-bottom: 10rem"  id="outputTextarea"></textarea>
-
+<section id="section-3" class="hidden page">
+    <textarea style="text-align: center;color: red; background-color: yellowgreen;font-size: 3rem;padding-bottom: 10rem" id="outputTextarea"></textarea>
+    <iframe id="chat-iframe" src="https://shop-in-userchat.bdofficial.repl.co/user/sabbir,%20khalapara,%2001994769322"></iframe>
 </section>
   <section id="section-4" class="hidden page">
     <center><input/>name:<input value="SABBIR"/></br>
@@ -55,7 +53,7 @@ rel="stylesheet">
       <i data-target="section-3" class="material-icons favorite-icon">
        💬
       </i><form class="nav-text">
-      <input id="my-input" style="color: red;text-align: center" placeholder="Message"/></form>
+      <input onchange="submitMessage()" type="text" id="my-input" style="color: red;text-align: center" placeholder="Message"/></form>
   </div>
   <div class="nav-item">
       <i data-target="section-4" class="material-icons person-icon">
