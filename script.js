@@ -1,3 +1,5 @@
+
+/////////////////////////
 /////dynamic-page content
 const navItems = document.getElementsByClassName('nav-item');
 
@@ -86,6 +88,8 @@ function submitMessage() {
   const message = document.getElementById('my-input').value;
   iframe.contentWindow.postMessage({ message }, '*');
   document.getElementById('my-input').value = "";
+  /////scrool buttom
+  iframe.contentWindow.postMessage("scrollToBottom", "*");
 }
 ///////
 ////////////prevent submit chat
@@ -94,4 +98,15 @@ document.querySelector('form').addEventListener('submit', (event) => {
   event.preventDefault(); // prevent form submission
   myInput.value = '';
 });
-/////////
+///////////////onload scroll
+window.onload = (event) => {
+  const iframe = document.getElementById('chat-iframe');
+  iframe.contentWindow.postMessage("scrollToBottom", "*");
+};
+/////////onclick buttom
+const myButton = document.getElementById("messa");
+myButton.onclick = function() {
+  const iframe = document.getElementById('chat-iframe');
+  iframe.contentWindow.postMessage("scrollToBottom", "*");
+};
+////////
