@@ -3,28 +3,20 @@
       const iframe = document.getElementById('chat-iframe');
       const message = document.getElementById('my-input').value;
       iframe.contentWindow.postMessage({ message }, '*');
-      document.getElementById('my-input').value = " ";
+      document.getElementById('my-input').value = "";
     }
-////////////
-  const myInput = document.getElementById('my-input');
-  const myTextarea = document.getElementById('outputTextarea');
-  
-  document.querySelector('form').addEventListener('submit', (event) => {
-    event.preventDefault(); // prevent form submission
-    myTextarea.value += myInput.value+"\n";
-    myInput.value = '';
-  });
 ///////
-
+//////////////cart to message 
 function copyTextarea() {
   var input = document.getElementById("myList").value;
-  document.getElementById("outputTextarea").value += input;
+  document.getElementById("my-input").value += input;
+  submitMessage();
 }
 /////
 
 
 
-/////
+/////dynamic-page content
 const navItems = document.getElementsByClassName('nav-item');
 
 for (let i = 0; i < navItems.length; i++) {
@@ -35,8 +27,8 @@ for (let i = 0; i < navItems.length; i++) {
         navItems[i].classList.add('active');
     });
 }
-
-
+////////))
+//////////dynamic---pages
 // একটি নির্দিষ্ট পৃষ্ঠায় নেভিগেট করুন।using id
 const navigateTo = target => {
   const pages = Array.from(document.querySelectorAll('.page'))
@@ -58,7 +50,7 @@ buttons.forEach(button => {
 });
 
 
-
+////))search products 
 function filterProducts() {
   // Get input value and convert to lowercase
   var input = document.getElementById('search').value.toLowerCase();
@@ -78,7 +70,7 @@ function filterProducts() {
   }
 }
 
-
+///aditem
   function addItem1() {
     document.querySelector("#myList").innerHTML += "SHOES"+"\n";
   }
@@ -86,7 +78,7 @@ function filterProducts() {
     document.querySelector("#myList").innerHTML += "CLOTHES"+"\n";
   }
   function addItem3() {
-    document.querySelector("#myList").innerHTML += "ACCESSORIES"+"\n";
+    document.querySelector("#myList").innerHTML += "ACCESSORIES" + "\n";
   }
   function addItem4() {
     document.querySelector("#myList").innerHTML += "SARI"+"\n";
@@ -100,7 +92,7 @@ function filterProducts() {
   function addItem7() {
     document.querySelector("#myList").innerHTML += "SARWANI"+"\n";
   }
-  
+  ////////
   
   
   
