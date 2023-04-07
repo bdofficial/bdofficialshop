@@ -103,7 +103,7 @@ window.onload = (event) => {
   const iframe = document.getElementById('chat-iframe');
   iframe.contentWindow.postMessage("scrollToBottom", "*");
 };
-/////////onclick buttom
+/////////onclick bottom
 const myButton = document.getElementById("messa");
 myButton.onclick = function() {
   const iframe = document.getElementById('chat-iframe');
