@@ -141,4 +141,7 @@ img {
 .active {
   text-decoration: underline;
 }
-
+.page input{
+  background-color: red;
+  text-align: center;
+}
