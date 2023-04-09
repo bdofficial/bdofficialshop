@@ -37,5 +37,7 @@
       
       window.addEventListener("message", receiveMessage, false);
  /////////onload
+ window.onload = function () {
  updateInputFields();
+ };
  //////
