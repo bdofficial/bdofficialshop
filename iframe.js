@@ -34,5 +34,5 @@
         document.getElementById("sendcookies").click();
         //////
       }
-
+      
       window.addEventListener("message", receiveMessage, false);
