@@ -10,10 +10,8 @@
                 address: document.getElementById("address").value,
                 number: document.getElementById("number").value
             };
-// Set cookies with message data
-            document.cookie = "name=" + message.name;
-            document.cookie = "address=" + message.address;
-            document.cookie = "number=" + message.number;
+
+
           // Post message to iframe
             myIframe.contentWindow.postMessage(message, "https://shop-chat-iframe.bdofficial.repl.co");
         }
