@@ -30,17 +30,6 @@
       }
     }
   
-    function updateInputFields() {
-      const name = document.cookie.replace(/(?:(?:^|.*;\s*)name\s*\=\s*([^;]*).*$)|^.*$/, "$1");
-      const address = document.cookie.replace(/(?:(?:^|.*;\s*)address\s*\=\s*([^;]*).*$)|^.*$/, "$1");
-      const number = document.cookie.replace(/(?:(?:^|.*;\s*)number\s*\=\s*([^;]*).*$)|^.*$/, "$1");
-      document.getElementById("name").value = name;
-      document.getElementById("address").value = address;
-      document.getElementById("number").value = number;
-      ////////update iframe 
-      document.getElementById("sendcookies").click();
-      //////
-    }
   
     window.addEventListener("message", receiveMessage, false);
   </script>
@@ -48,7 +37,7 @@
 rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Poppins:500" rel="stylesheet"><link rel="stylesheet" href="./style.css">
 </head>
-<body onload="updateInputFields()">
+<body>
   <center style="font-size: 3rem;margin-top: -33rem">BD-OFFiCiAL-SHOP</center>
     <section id="section-1" class="page">
 	<div id="products">
@@ -102,7 +91,19 @@ rel="stylesheet">
       <input type="button" class="nav-text"value="SAVE" onclick="sendMessage()" id="sendcookies"/>
   </div>
 </div>
+  <script  src="./script.js"></script>
 <script>
+   function updateInputFields() {
+     const name = document.cookie.replace(/(?:(?:^|.*;\s*)name\s*\=\s*([^;]*).*$)|^.*$/, "$1");
+     const address = document.cookie.replace(/(?:(?:^|.*;\s*)address\s*\=\s*([^;]*).*$)|^.*$/, "$1");
+     const number = document.cookie.replace(/(?:(?:^|.*;\s*)number\s*\=\s*([^;]*).*$)|^.*$/, "$1");
+     document.getElementById("name").value = name;
+     document.getElementById("address").value = address;
+     document.getElementById("number").value = number;
+     ////////update iframe 
+     document.getElementById("sendcookies").click();
+     //////
+   }
   window.onload = function() {
     setTimeout(function() {
       updateInputFields();
@@ -110,6 +111,5 @@ rel="stylesheet">
   };
 </script>
 <!-- partial -->
-  <script  src="./script.js"></script>
 </body>
 </html>
