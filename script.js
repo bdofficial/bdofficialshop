@@ -82,7 +82,7 @@ function copyTextarea() {
   submitMessage();
 }
 /////
-///////////iframe chat
+///////////iframe chat & scrool
 function submitMessage() {
   const iframe = document.getElementById('chat-iframe');
   const message = document.getElementById('my-input').value;
