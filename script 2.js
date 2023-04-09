@@ -87,6 +87,8 @@ function submitMessage() {
   const message = document.getElementById('my-input').value;
   iframe.contentWindow.postMessage({ message }, '*');
   document.getElementById('my-input').value = "";
+  /////scrool buttom
+  iframe.contentWindow.postMessage("scrollToBottom", "*");
 }
 ///////
 ////////////prevent submit chat
@@ -95,4 +97,16 @@ document.querySelector('form').addEventListener('submit', (event) => {
   event.preventDefault(); // prevent form submission
   myInput.value = '';
 });
-///////
+///////////////onload scroll
+window.onload = (event) => {
+  const iframe = document.getElementById('chatiframe');
+  iframe.contentWindow.postMessage("scrollToBottom", "*");
+  updateInputFields()
+};
+/////////onclick bottom
+const myButton = document.getElementById("messa");
+myButton.onclick = function() {
+  const iframe = document.getElementById('chatiframe');
+  iframe.contentWindow.postMessage("scrollToBottom", "*");
+};
+////////
