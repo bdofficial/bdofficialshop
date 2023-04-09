@@ -83,7 +83,7 @@ function copyTextarea() {
 /////
 ///////////iframe chat & scrool
 function submitMessage() {
-  const iframe = document.getElementById('chat-iframe');
+  const iframe = document.getElementById('chatiframe');
   const message = document.getElementById('my-input').value;
   iframe.contentWindow.postMessage({ message }, '*');
   document.getElementById('my-input').value = "";
@@ -99,13 +99,13 @@ document.querySelector('form').addEventListener('submit', (event) => {
 });
 ///////////////onload scroll
 window.onload = (event) => {
-  const iframe = document.getElementById('chat-iframe');
+  const iframe = document.getElementById('chatiframe');
   iframe.contentWindow.postMessage("scrollToBottom", "*");
 };
 /////////onclick bottom
 const myButton = document.getElementById("messa");
 myButton.onclick = function() {
-  const iframe = document.getElementById('chat-iframe');
+  const iframe = document.getElementById('chatiframe');
   iframe.contentWindow.postMessage("scrollToBottom", "*");
 };
 ////////
