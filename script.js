@@ -82,8 +82,14 @@ function copyTextarea() {
 }
 /////
 ///////////iframe chat & scrool
-
-
+function submitMessage() {
+  const iframe = document.getElementById('chatiframe');
+  const message = document.getElementById('my-input').value;
+  iframe.contentWindow.postMessage({ message }, '*');
+  document.getElementById('my-input').value = "";
+  /////scrool buttom
+  iframe.contentWindow.postMessage("scrollToBottom", "*");
+}
 ///////
 ////////////prevent submit chat
 const myInput = document.getElementById('my-input');
@@ -97,10 +103,3 @@ window.onload = (event) => {
   iframe.contentWindow.postMessage("scrollToBottom", "*");
   updateInputFields()
 };
-/////////onclick bottom
-const myButton = document.getElementById("messa");
-myButton.onclick = function() {
-  const iframe = document.getElementById('chatiframe');
-  iframe.contentWindow.postMessage("scrollToBottom", "*");
-};
-////////
