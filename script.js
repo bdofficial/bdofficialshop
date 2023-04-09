@@ -101,6 +101,7 @@ document.querySelector('form').addEventListener('submit', (event) => {
 window.onload = (event) => {
   const iframe = document.getElementById('chatiframe');
   iframe.contentWindow.postMessage("scrollToBottom", "*");
+  updateInputFields()
 };
 /////////onclick bottom
 const myButton = document.getElementById("messa");
