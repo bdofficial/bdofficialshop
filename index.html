@@ -1,36 +1,54 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Iframe Window</title>
+    <title>Parent Window</title>
     <script>
         function sendMessage() {
+            const myIframe = document.getElementById('myIframe');
             const message = {
-              name: document.getElementById("name").value,
-              address: document.getElementById("address").value,
-              number: document.getElementById("number").value
+                name: document.getElementById("name").value,
+                address: document.getElementById("address").value,
+                number: document.getElementById("number").value
             };
-            parent.postMessage(message, "https://iframe-cookies-demo.bdofficial.repl.co");
+// Set cookies with message data
+            document.cookie = "name=" + message.name;
+            document.cookie = "address=" + message.address;
+            document.cookie = "number=" + message.number;
+          // Post message to iframe
+            myIframe.contentWindow.postMessage(message, "https://shop-chat-iframe.bdofficial.repl.co");
         }
+
         function receiveMessage(event) {
-            if (event.origin === "https://iframe-cookies-demo.bdofficial.repl.co") {
+            if (event.origin === "https://shop-chat-iframe.bdofficial.repl.co") {
                 const data = event.data;
-                updateInputFields(data);
+                document.cookie = "name=" + data.name;
+                document.cookie = "address=" + data.address;
+                document.cookie = "number=" + data.number;
+                updateInputFields();
             }
         }
 
-        function updateInputFields(data) {
-            document.getElementById("name").value = data.name;
-            document.getElementById("address").value = data.address;
-            document.getElementById("number").value = data.number;
+        function updateInputFields() {
+            const name = document.cookie.replace(/(?:(?:^|.*;\s*)name\s*\=\s*([^;]*).*$)|^.*$/, "$1");
+            const address = document.cookie.replace(/(?:(?:^|.*;\s*)address\s*\=\s*([^;]*).*$)|^.*$/, "$1");
+            const number = document.cookie.replace(/(?:(?:^|.*;\s*)number\s*\=\s*([^;]*).*$)|^.*$/, "$1");
+            document.getElementById("name").value = name;
+            document.getElementById("address").value = address;
+            document.getElementById("number").value = number;        
+////////update iframe 
+document.getElementById("sendcookies").click();         
+//////
         }
 
         window.addEventListener("message", receiveMessage, false);
     </script>
 </head>
-<body>
-    <label>Name: <input type="text" id="name"></label>
-    <label>Address: <input type="text" id="address"></label>
+<body onload="updateInputFields()">
+    <label>Name: <input type="text" id="name"></label></br>
+    <label>Address: <input type="text" id="address"></label></br>
     <label>Number: <input type="text" id="number"></label>
-    <button onclick="sendMessage()">Send Message</button>
+    <button onclick="sendMessage()" id="sendcookies">Send Message</button>
+    <br><br>
+  <iframe src="https://shop-chat-iframe.bdofficial.repl.co" id="myIframe"></iframe>
 </body>
 </html>
