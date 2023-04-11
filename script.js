@@ -1,3 +1,4 @@
+////////
 /////////////////////////
 /////dynamic-page content
 const navItems = document.getElementsByClassName('nav-item');
