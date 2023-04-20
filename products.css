@@ -1,0 +1,16 @@
+#details {
+  color:#ffffff;
+  background-color:green; 
+  text-align:center;
+}
+#quantity {
+color:white;
+background-color:#141415; 
+text-align:center;
+}
+#subcart {
+  color:#ffffff;
+  background-color:rgb(238, 88, 62); 
+  width:11.7rem;
+  margin-top:-16.4px;
+}

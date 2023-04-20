@@ -130,7 +130,7 @@ img {
 .page {
   display: flex;
   flex-direction: column;
-  padding-top: 4.7rem;
+  padding-top: 4rem;
 }
 .hidden {
   display: none !important;
@@ -143,11 +143,13 @@ img {
   background-color: red;
   text-align: center;
 }
-#myList{
+#cart{
+text-align: center;
+line-height: 90px;
 color: blue; 
 background-color: yellowgreen;
 font-size: 3rem;
-padding-bottom: 100%;
-width:100%;
-margin-left: 0.1rem;
+padding-bottom: 144%;
+width:101%;
+margin-left: 0rem;
 }
