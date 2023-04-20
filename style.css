@@ -128,9 +128,9 @@ img {
 }
 
 .page {
-  display: flex;
-  flex-direction: column;
-  padding-top: 4rem;
+  padding-top: 4.33rem;
+  margin-left: 0.55rem;
+  padding-bottom: 2.7rem
 }
 .hidden {
   display: none !important;
@@ -145,11 +145,12 @@ img {
 }
 #cart{
 text-align: center;
-line-height: 90px;
 color: blue; 
 background-color: yellowgreen;
 font-size: 3rem;
-padding-bottom: 144%;
+padding-bottom: 148.2%;
 width:101%;
-margin-left: 0rem;
+margin-left: -0.5rem;
+margin-top: -0.4rem;
+margin-bottom: -1rem;
 }

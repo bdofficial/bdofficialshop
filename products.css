@@ -1,16 +1,43 @@
 #details {
   color:#ffffff;
   background-color:green; 
+  font-size: 1.7rem;
   text-align:center;
+  width: 98.6%;
+  padding-top:1rem;
+  padding-bottom:1rem;
 }
 #quantity {
 color:white;
 background-color:#141415; 
+height: 2.7rem;
+font-size: 2rem;
 text-align:center;
+width: 98.6%;
 }
 #subcart {
   color:#ffffff;
   background-color:rgb(238, 88, 62); 
+  font-size: 1.7rem;
   width:11.7rem;
-  margin-top:-16.4px;
+  margin-top:0;
+  width: 99.9%;
+  padding-top:0.5rem;
+  padding-bottom:0.5rem;
+}
+
+.products {
+  display: inline-block;
+  width: 32.38%;
+  margin: 0.2rem;
+}
+#img {
+  min-height: 100%;
+  min-width: 100%;
+  width: auto;
+  height: auto;
+  margin-top: 0.4rem;
+}
+.product-details{
+  margin-top: -0.27rem;
 }
