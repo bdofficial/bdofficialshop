@@ -37,18 +37,3 @@ const forms = document.querySelectorAll('form');
     form.elements.namedItem('quantity').value = "";
   });
 });
-
-
-
-/////lazy load
-const lazyDiv = document.querySelector('#products');
-const lazyDivObserver = new IntersectionObserver(function(entries) {
-  entries.forEach(function(entry) {
-    if (entry.isIntersecting) {
-      // Load the content for the div
-      lazyDiv.classList.remove('lazy');
-      lazyDivObserver.unobserve(entry.target);
-    }
-  });
-});
-lazyDivObserver.observe(lazyDiv);
