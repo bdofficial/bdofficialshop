@@ -41,13 +41,6 @@ buttons.forEach(button => {
     button.classList.add('active')
   })
 });
-//////////////cart to message 
-function copyTextarea() {
-  var input = document.getElementById("cart").value;
-  document.getElementById("my-input").value += input;
-  submitMessage();
-}
-/////
 ///////////iframe chat & scrool
 function submitMessage() {
   const iframe = document.getElementById('chatiframe');

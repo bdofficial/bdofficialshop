@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Split Input Example</title>
+</head>
+<body>
+	<form>
+		<input type="text" id="inputField" name="inputField"></br>
+		<input type="button" value="Split Input" onclick="splitInput()">
+	</form>
+	<textarea id="outputTextarea"></textarea>
+	<script>
+		const splitInput = () => {
+		  const inputText = document.getElementById("inputField").value;
+		  const words = inputText.split(" ");
+		  let outputText = "";
+		  words.forEach((word) => {
+		    outputText += word + "\n";
+		  });
+		  document.getElementById("outputTextarea").value = outputText;
+		};
+	</script>
+</body>
+</html>

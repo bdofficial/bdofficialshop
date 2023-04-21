@@ -37,9 +37,6 @@ const forms = document.querySelectorAll('form');
     form.elements.namedItem('quantity').value = "";
   });
 });
-
-
-
 /////lazy load
 const lazyDiv = document.querySelector('#products');
 const lazyDivObserver = new IntersectionObserver(function(entries) {
