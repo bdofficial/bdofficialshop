@@ -6,9 +6,9 @@
           number: document.getElementById("number").value
         };
         // Set cookies with message data
-        document.cookie = "name=" + message.name;
-        document.cookie = "address=" + message.address;
-        document.cookie = "number=" + message.number;
+        document.cookie = "number=" + message.number + "; max-age=157784630; secure";
+        document.cookie = "address=" + message.address + "; max-age=157784630; secure";
+        document.cookie = "number=" + message.number + "; max-age=157784630; secure";
         // Post message to iframe
         chatiframe.contentWindow.postMessage(message, "https://shop-chat-iframe.bdofficial.repl.co");
       }
