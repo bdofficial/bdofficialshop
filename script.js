@@ -44,7 +44,9 @@ buttons.forEach(button => {
 ///////////iframe chat & scrool
 function submitMessage() {
   const iframe = document.getElementById('chatiframe');
-  const message = document.getElementById('my-input').value;
+  const nam = document.getElementById("name").value;
+  const mes = document.getElementById('my-input').value;
+  const message = nam +":" + mes;
   iframe.contentWindow.postMessage({ message }, '*');
   document.getElementById('my-input').value = "";
 }
