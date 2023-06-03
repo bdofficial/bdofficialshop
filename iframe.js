@@ -6,7 +6,7 @@
           number: document.getElementById("number").value
         };
         // Set cookies with message data
-        document.cookie = "number=" + message.number + "; max-age=157784630; secure";
+        document.cookie = "name=" + message.name + "; max-age=157784630; secure";
         document.cookie = "address=" + message.address + "; max-age=157784630; secure";
         document.cookie = "number=" + message.number + "; max-age=157784630; secure";
         // Post message to iframe
