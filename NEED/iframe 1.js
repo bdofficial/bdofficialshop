@@ -6,15 +6,15 @@
           number: document.getElementById("number").value
         };
         // Set cookies with message data
-        document.cookie = "name=" + message.name + "; max-age=157784630; secure";
-        document.cookie = "address=" + message.address + "; max-age=157784630; secure";
-        document.cookie = "number=" + message.number + "; max-age=157784630; secure";
+        document.cookie = "name=" + message.name;
+        document.cookie = "address=" + message.address;
+        document.cookie = "number=" + message.number;
         // Post message to iframe
-        chatiframe.contentWindow.postMessage(message, "https://ejs-mongodb.bdofficial.repl.co");
+        chatiframe.contentWindow.postMessage(message, "https://shop-chat-iframe.bdofficial.repl.co");
       }
 
       function receiveMessage(event) {
-        if (event.origin === "https://ejs-mongodb.bdofficial.repl.co") {
+        if (event.origin === "https://shop-chat-iframe.bdofficial.repl.co") {
           const data = event.data;
           document.cookie = "name=" + data.name;
           document.cookie = "address=" + data.address;
@@ -34,19 +34,5 @@
         document.getElementById("sendcookies").click();
         //////
       }
-      
+
       window.addEventListener("message", receiveMessage, false);
- /////////onload
- window.onload = function () {
- updateInputFields();
- };
- //////
- ///////on message scroll
- const chatiframe = document.getElementById('chatiframe');
- const messa = document.getElementById('messa');
- messa.addEventListener('click', function() {
-setTimeout(function() {
-   chatiframe.contentWindow.postMessage('scrollToBottom', '*');
-},300); 
- });
-////////////
