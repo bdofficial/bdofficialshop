@@ -20,7 +20,7 @@
         const quantityValue = quantityInput.value;
         const detailsValue = detailsInput.value;
 
-        if (quantityValue === '' || detailsValue === '') {
+        if (quantityValue === '' || quantityValue === '0' || detailsValue === '') {
           return;
         }
 
