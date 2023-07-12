@@ -128,6 +128,7 @@ img {
 }
 
 .page {
+  padding-top: 5rem;
   height: 100%
 }
 .hidden {
@@ -156,6 +157,9 @@ main{
 #section-3{
   background-color: darkcyan;
   padding-top: 4rem;
+}
+#section-4{
+padding-top: 0%;
 }
 #section-4 input{
   font-size: 5rem;
