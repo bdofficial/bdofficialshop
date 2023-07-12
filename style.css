@@ -139,20 +139,9 @@ img {
 .active {
   text-decoration: underline;
 }
-.page input{
+.info input{
   background-color: red;
   text-align: center;
-}
-#cart{
-text-align: center;
-color: blue; 
-background-color: yellowgreen;
-font-size: 3rem;
-padding-bottom: 148.2%;
-width:101%;
-margin-left: -0.5rem;
-margin-top: -0.4rem;
-margin-bottom: -1rem;
 }
 main{
   background-color: #311740;
