@@ -46,7 +46,7 @@ function submitMessage() {
   const iframe = document.getElementById('chatiframe');
   const nam = document.getElementById("name").value;
   const mes = document.getElementById('my-input').value;
-  const message = nam + ":" + mes;
+  const message = "𖦹 " + mes;
   iframe.contentWindow.postMessage({ message }, '*');
   document.getElementById('my-input').value = "";
 }
