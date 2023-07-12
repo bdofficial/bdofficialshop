@@ -181,7 +181,14 @@ padding-top: 0%;
 #Allura {
    font-family: "Sarina", serif;
  }
- 
+#chatroo{
+  font-family: "Jura", serif;
+  color: #0F9CD6;
+  text-shadow:
+  4px 3px 0px black,
+  0 0 0em ,
+  0 0 0.01em black;
+}
  
  
  
