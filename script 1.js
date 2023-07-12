@@ -2,23 +2,23 @@
 const search = document.getElementById("search");
 const productName = document.querySelectorAll(".product-details h3");
 search.addEventListener("keyup", e => {
-    const text = e.target.value.toLowerCase();
-    productName.forEach(product => {
-        const item = product.firstChild.textContent.toLowerCase();
-        product.parentElement.parentElement.style.display = item.includes(text) ? "block" : "none";
-    })
+  const text = e.target.value.toLowerCase();
+  productName.forEach(product => {
+    const item = product.firstChild.textContent.toLowerCase();
+    product.parentElement.parentElement.style.display = item.includes(text) ? "block" : "none";
+  })
 });
 /////////////////////////
 /////dynamic-page content
 const navItems = document.getElementsByClassName('nav-item');
 
 for (let i = 0; i < navItems.length; i++) {
-    navItems[i].addEventListener('click', () => {
-        for(let j = 0; j < navItems.length; j++) 
-            navItems[j].classList.remove('active');
-  
-        navItems[i].classList.add('active');
-    });
+  navItems[i].addEventListener('click', () => {
+    for (let j = 0; j < navItems.length; j++)
+      navItems[j].classList.remove('active');
+
+    navItems[i].classList.add('active');
+  });
 }
 ////////
 //////////dynamic---pages
@@ -46,15 +46,10 @@ function submitMessage() {
   const iframe = document.getElementById('chatiframe');
   const nam = document.getElementById("name").value;
   const mes = document.getElementById('my-input').value;
-  const message = nam +":" + mes;
+  const message = nam + ":" + mes;
   iframe.contentWindow.postMessage({ message }, '*');
   document.getElementById('my-input').value = "";
 }
 ///////
-////////////prevent submit chat
-const myInput = document.getElementById('my-input');
-document.querySelector('form').addEventListener('submit', (event) => {
-  event.preventDefault(); // prevent form submission
-  myInput.value = '';
-});
-///////
+
+
