@@ -155,8 +155,8 @@ main{
     padding-top: 6.15rem;
 }
 #section-3{
-  background-color: darkcyan;
   padding-top: 4.7rem;
+  background-image: url("1.jpeg");
   background-size: cover;
 }
 #section-4{
