@@ -50,7 +50,7 @@ body {
   border-radius: 30px;
 }
 .nav-text input{
-  font-size: 5rem;
+  font-size: 2rem;
   background-color: red;
   border: none;
   outline: none;
@@ -83,9 +83,6 @@ flex-grow: 5.4321;
 border: solid;
 border-color: #eee;
 background-color: #eee
-}
-.nav-item.active.s input{
-  background-color: #eee
 }
 .nav-item.active > .nav-text {
     display: inline-block;
