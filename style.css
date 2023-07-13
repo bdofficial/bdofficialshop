@@ -41,7 +41,7 @@ body {
 }
 
 .nav-text {
-  width: 2.5rem;
+  width: 0rem;
   flex-grow: 3;
   text-align: center;
   margin: auto;
