@@ -31,7 +31,7 @@ const navigateTo = target => {
   document.querySelector(`#${target}`).classList.remove('hidden')
 }
 
-const buttons = Array.from(document.querySelectorAll('i'))
+const buttons = Array.from(document.querySelectorAll('.nav-item'))
 buttons.forEach(button => {
   // প্রতিটি বাটনের ক্লিকের জন্য শুনুন।
   button.addEventListener('click', () => {

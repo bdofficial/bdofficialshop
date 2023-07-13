@@ -38,14 +38,23 @@ body {
 }
 
 .nav-text {
-    font-size: 20px;
-    margin: auto;
-    text-align: center;
-    font-weight: 500;
-    display: none;
-    transition: all 0.3s ease;
+  flex-grow: 3;
+  text-align: center;
+  margin: auto;
+  display: none;
+  transition: all 0.3s ease;
+  border-radius: 30px;
 }
-
+.nav-text input{
+  text-align: center;
+  font-size: 2.5rem;
+  width: 100%;
+  border-radius: 30px;
+  color: darkcyan;
+}
+.nav-text input::placeholder {
+  color: hsla(205, 86%, 44%, 1);
+}
 .material-icons {
     display: inline;
     font-size: 32px;
@@ -189,9 +198,3 @@ padding-top: 0%;
   0 0 0em ,
   0 0 0.01em black;
 }
-#search{
-
-}
- 
-position: absolute;
-text-decoration: none;

@@ -298,7 +298,7 @@
 
 <!-- section -->
 <section id="section-3" class="hidden page">
-  <center id="chatroo" style="font-size: 5rem">CHAT-ROOM</center>
+  <center id="chatroo" style="font-size: 5rem">YOU-CAN-ORDER</center>
     <iframe id="chatiframe" style="height:135rem;border-color:white;width:99.6%;border: none;
     outline: none" src="https://ejs-mongodb-top-chat.bdofficial.repl.co/user/abc"></iframe>
 </section>
@@ -318,29 +318,34 @@
 <!-- main -->
 <!-- partial:index.partial.html -->
 <div class="nav">
-  <div class="nav-item active">
-     <i data-target="section-1" class="active material-icons home-icon">
+  <div data-target="section-1" class="nav-item active">
+     <i class="active material-icons home-icon">
           👕
       </i>
-      <input id="search" type="search" oninput="filterProducts()" id="search" class="nav-text" placeholder="Search"/>
+<form onsubmit="return false" class="nav-text">
+    <input style="color:hsla(205, 86%, 44%, 1)" id="search" type="text" oninput="filterProducts()" id="search" placeholder="Search"/></form>
   </div>
-  <div class="nav-item">
-      <i data-target="section-2" class="material-icons search-icon">
+  <div data-target="section-2" class="nav-item">
+      <i class="material-icons search-icon">
         🛒
       </i>
-      <input onclick="copyTextarea()" type="button" class="nav-text"value="ORDER"/>
+       <div class="nav-text">
+      <input onclick="copyTextarea()" type="button"value="ORDER"/>
+      </div>
   </div>
-  <div class="nav-item">
-      <i id="messa" data-target="section-3" class="material-icons favorite-icon">
+  <div data-target="section-3" class="nav-item">
+      <i id="messa" class="material-icons favorite-icon">
        💬
       </i><form onsubmit="return false" class="nav-text">
-      <input onchange="submitMessage()" type="search" id="my-input" style="color: red;text-align: center" placeholder="Message"/></form>
+      <input style="color:hsla(205, 86%, 44%, 1)" onchange="submitMessage()" type="text" id="my-input" placeholder="Message"/></form>
   </div>
-  <div class="nav-item">
-      <i data-target="section-4" class="material-icons person-icon">
+  <div data-target="section-4" class="nav-item">
+      <i class="material-icons person-icon">
           👤
       </i>
-      <input type="button" class="nav-text"value="SAVE" onclick="sendMessage()" id="sendcookies"/>
+      <div class="nav-text">
+      <input type="button" value="SAVE" onclick="sendMessage()" id="sendcookies"/>
+      </div>
   </div>
 </div>
 <!-- partial:index.partial.html -->
