@@ -29,6 +29,9 @@ function submitMessage() {
   const message = "𖦹 " + mes;
   iframe.contentWindow.postMessage({ message }, '*');
   document.getElementById('my-input').value = "";
+  setTimeout(function() {
+    chatiframe.contentWindow.postMessage('scrollToBottom', '*');
+  }, 2000);
 }
 ///////
 
