@@ -44,5 +44,9 @@
  ///////on message scroll
  const chatiframe = document.getElementById('chatiframe');
  const messa = document.getElementById('messa');
- 
+ messa.addEventListener('click', function() {
+setTimeout(function() {
+   chatiframe.contentWindow.postMessage('scrollToBottom', '*');
+},300); 
+ });
 ////////////
