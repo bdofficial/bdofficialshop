@@ -31,7 +31,7 @@ function submitMessage() {
   document.getElementById('my-input').value = "";
   setTimeout(function() {
     chatiframe.contentWindow.postMessage('scrollToBottom', '*');
-  }, 3000);
+  }, 10000);
 }
 ///////
 
