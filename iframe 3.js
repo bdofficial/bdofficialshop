@@ -40,7 +40,7 @@
  updateInputFields();
  };
  //////
- ///////on click scroll
+ ///////on message scroll
  const chatiframe = document.getElementById('chatiframe');
  const messa = document.getElementById('messa');
  messa.addEventListener('click', function() {
