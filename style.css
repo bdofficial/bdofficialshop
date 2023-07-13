@@ -28,6 +28,7 @@ body {
   height: 4rem;
 }
 .nav-item {
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -35,6 +36,8 @@ body {
     padding: 10px 15px;
     cursor: pointer;
     transition: all 0.2s ease-out;
+    border: solid;
+    border-color: white;
 }
 
 .nav-text {
@@ -68,12 +71,22 @@ body {
 /* */
 
 .nav-item.active {
-    flex-grow: 3;
+    flex-grow: 3.2;
     border-radius: 30px;
     background: #eee;
     justify-content: flex-start;
+    border: solid;
+    border-color: #eee;
 }
-
+.nav-item.active.s{
+flex-grow: 5.4321;
+border: solid;
+border-color: #eee;
+background-color: #eee
+}
+.nav-item.active.s input{
+  background-color: #eee
+}
 .nav-item.active > .nav-text {
     display: inline-block;
 }
