@@ -95,9 +95,40 @@ background-color: #eee
     display: inline-block;
 }
 
-.nav-item.active > .material-icons {
+.nav-item.active > .material-icons.home-icon {
     color: #5a35b5;
     display: none;
+}
+
+.material-icons.home-icon ~ .nav-text {
+    color: #5a35b5;
+}
+
+.nav-item.active > .material-icons.favorite-icon {
+    color: #c9329a;
+    display: none;
+}
+
+.material-icons.favorite-icon ~ .nav-text {
+    color: #c9329a;
+}
+
+.nav-item.active > .material-icons.search-icon {
+    color: #e5a023;
+    display: none;
+}
+
+.material-icons.search-icon ~ .nav-text {
+    color: #e5a023;
+}
+
+.nav-item.active > .material-icons.person-icon {
+    color: #0091a9;
+    display: none;
+}
+
+.material-icons.person-icon ~ .nav-text {
+    color: #0091a9;
 }
 
 ul {
