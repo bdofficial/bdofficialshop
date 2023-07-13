@@ -122,7 +122,6 @@ img {
 
 .page {
   padding-top: 5rem;
-  height: 100%
 }
 .hidden {
   display: none !important;
@@ -137,6 +136,7 @@ main{
   margin-top: -0.6rem
 }
 #section-1 {
+    height: 87.2vh;
     padding-top: 6rem;
     background-color: #311740;
 }
@@ -148,6 +148,7 @@ main{
     padding-top: 6.15rem;
 }
 #section-3{
+  height:80vh;
   padding-top: 6.4rem;
   background-color: darkcyan;
   background-size: cover;
