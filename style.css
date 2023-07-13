@@ -50,10 +50,10 @@ body {
   border-radius: 30px;
 }
 .nav-text input{
-  margin-top: -0.74rem;
+  margin-top: -0.8rem;
   height: 3.9rem;
   font-size: 2.5rem;
-  background-color: #eee;
+  background-color: transparent;
   border: none;
   outline: none;
   text-align: center;
