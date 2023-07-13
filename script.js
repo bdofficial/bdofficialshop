@@ -41,18 +41,3 @@ buttons.forEach(button => {
     button.classList.add('active')
   })
 });
-///////////iframe chat & scrool
-function submitMessage() {
-  const iframe = document.getElementById('chatiframe');
-  const nam = document.getElementById("name").value;
-  const mes = document.getElementById('my-input').value;
-  if (mes === ' ' || mes === '') {
-    return;
-  }
-  const message = "𖦹 " + mes;
-  iframe.contentWindow.postMessage({ message }, '*');
-  document.getElementById('my-input').value = "";
-}
-///////
-
-
