@@ -46,6 +46,6 @@
  messa.addEventListener('click', function() {
    setTimeout(function() {
      chatiframe.contentWindow.postMessage('scrollToBottom', '*');
-   }, 300);
+   }, 33300);
  });
 ////////////

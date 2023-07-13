@@ -151,16 +151,15 @@ main{
 #section-3{
   height:79vh;
   padding-bottom: 4.1vh;
-  padding-top: 6.4rem;
+  padding-top: 5.43rem;
   background-color: darkcyan;
-  background-size: cover;
 }
 #section-4{
 padding-top: 0%;
 }
 #section-4 input{
   font-size: 5rem;
-  background-color: #5A424200;
+  background-color: transparent;
   text-align: center;
   border-radius: 15rem;
   height:7rem;
@@ -179,11 +178,15 @@ padding-top: 0%;
  }
 #chatroo{
   font-family: "Jura", serif;
-  color: #0F9CD6;
+  color: white;
   text-shadow:
   4px 3px 0px black,
   0 0 0em ,
   0 0 0.01em black;
+ background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/78779/star.svg");
+ background-position: 0 1.06em;
+ background-size: 10px 9px;
+ color: #f2f3f8;
 }
 
 #scro{
