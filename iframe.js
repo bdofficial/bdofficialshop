@@ -14,14 +14,13 @@
       }
 
       function receiveMessage(event) {
-        if (event.origin === "https://ejs-mongodb-top-chat.bdofficial.repl.co") {
-          const data = event.data;
-          document.cookie = "name=" + data.name;
-          document.cookie = "address=" + data.address;
-          document.cookie = "number=" + data.number;
-          updateInputFields();
-        }
-      }
+  const data = event.data;
+  document.cookie = "name=" + encodeURIComponent(data.name);
+  document.cookie = "address=" + encodeURIComponent(data.address);
+  document.cookie = "number=" + encodeURIComponent(data.number);
+  updateInputFields();
+}
+
 
       function updateInputFields() {
         const name = document.cookie.replace(/(?:(?:^|.*;\s*)name\s*\=\s*([^;]*).*$)|^.*$/, "$1");
@@ -44,5 +43,9 @@
  ///////on message scroll
  const chatiframe = document.getElementById('chatiframe');
  const messa = document.getElementById('messa');
- 
+ messa.addEventListener('click', function() {
+   setTimeout(function() {
+     chatiframe.contentWindow.postMessage('scrollToBottom', '*');
+   }, 300);
+ });
 ////////////
