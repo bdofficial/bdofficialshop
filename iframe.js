@@ -10,7 +10,7 @@
         document.cookie = "address=" + message.address + "; max-age=157784630; secure";
         document.cookie = "number=" + message.number + "; max-age=157784630; secure";
         // Post message to iframe
-        chatiframe.contentWindow.postMessage(message, "https://ejs-mongodb-top-chat.bdofficial.repl.co");
+        chatiframe.contentWindow.postMessage(message, "*");
       }
 
       function receiveMessage(event) {
