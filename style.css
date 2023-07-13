@@ -38,6 +38,7 @@ body {
 }
 
 .nav-text {
+  width: 2.5rem;
   flex-grow: 3;
   text-align: center;
   margin: auto;
@@ -46,6 +47,9 @@ body {
   border-radius: 30px;
 }
 .nav-text input{
+  background-color: transparent;
+  border: none;
+  outline: none;
   text-align: center;
   font-size: 2.5rem;
   width: 100%;
@@ -108,12 +112,6 @@ body {
 
 .material-icons.person-icon ~ .nav-text {
     color: #0091a9;
-}
-
-.nav input{
-background-color: #42445A00;
-border: none;
-outline: none;
 }
 
 ul {
