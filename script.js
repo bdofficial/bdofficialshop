@@ -56,14 +56,3 @@ function submitMessage() {
 ///////
 
 
-// Get the address bar element.
-var addressBar = document.getElementById("addressBar");
-
-// Create a listener for the scroll event.
-window.addEventListener("scroll", function() {
-  // Check if the address bar is hidden.
-  if (addressBar.classList.contains("hide")) {
-    // Unhide the address bar.
-    addressBar.classList.remove("hide");
-  }
-});

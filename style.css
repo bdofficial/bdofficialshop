@@ -1,6 +1,6 @@
 body {
     display: flex;
-  height: 100%;
+  height: 100vh;
   width: 100%;
   font-family: 'Poppins', sans-serif;
   margin-left: 0rem;
@@ -212,4 +212,10 @@ padding-top: 0%;
   4px 3px 0px black,
   0 0 0em ,
   0 0 0.01em black;
+}
+
+#scro{
+  width: 100%;
+  
+  overflow: scroll;
 }
