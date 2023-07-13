@@ -1,6 +1,6 @@
 body {
    display: flex;
-  height: 100vh;
+  height: 100%;
   width: 100%;
   font-family: 'Poppins', sans-serif;
   margin-left: 0rem;
@@ -51,8 +51,8 @@ body {
 }
 .nav-text input{
   height: 3.9rem;
-  font-size: 2.5rem;
-  background-color: transparent;
+  font-size: 2.3rem;
+  background-color: #eee;
   border: none;
   outline: none;
   text-align: center;
@@ -136,9 +136,10 @@ main{
   margin-top: -0.6rem
 }
 #section-1 {
-    height: 87.2vh;
+    height: 87.3vh;
     padding-top: 6rem;
     background-color: #311740;
+    overflow: scroll
 }
 #section-1 input {
   border: none;
@@ -148,7 +149,8 @@ main{
     padding-top: 6.15rem;
 }
 #section-3{
-  height:80vh;
+  height:79vh;
+  padding-bottom: 4.1vh;
   padding-top: 6.4rem;
   background-color: darkcyan;
   background-size: cover;
@@ -186,6 +188,5 @@ padding-top: 0%;
 
 #scro{
   width: 100%;
-  
   overflow: scroll;
 }
