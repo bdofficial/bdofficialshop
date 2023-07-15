@@ -22,7 +22,7 @@ body {
     border-bottom-right-radius: 33px; 
     box-shadow: 0px 33px 0px lightgray;
     padding-top: 1.435rem;
-    padding-bottom: 1.5rem;
+    padding-bottom: 1.3rem;
 }
 .nav {
   position: fixed;
@@ -66,8 +66,8 @@ body {
   color: hsla(205, 86%, 44%, 1);
 }
 .material-icons {
-    font-size: 3rem;
-    margin-top: -1rem;
+    font-size: 2.8rem;
+    margin-top: -1.5rem;
     transition: color .3s;
 }
 
@@ -80,6 +80,7 @@ body {
     justify-content: flex-start;
     border: solid;
     border-color: #eee;
+    margin-top: -0.5rem;
 }
 .nav-item.active input{
 margin-top: -0.8rem;
@@ -91,7 +92,7 @@ border-color: #eee;
 background-color: #eee
 }
 .nav-item.active.s input{
- margin-top: -1rem;
+ margin-top: -0.5rem;
 }
 .nav-item.active > .nav-text {
     display: inline-block;
@@ -195,4 +196,5 @@ padding-top: 0%;
   width: 100%;
   overflow: scroll;
 }
+
 
