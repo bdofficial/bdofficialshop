@@ -83,7 +83,7 @@ body {
     margin-top: -0.5rem;
 }
 .nav-item.active input{
-margin-top: -0.8rem;
+margin-top: -0.5rem;
 }
 .nav-item.active.s{
 flex-grow: 5.4321;
