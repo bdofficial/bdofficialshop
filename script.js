@@ -1,22 +1,27 @@
-/////search-products 
 const search = document.getElementById("search");
-const productName = document.querySelectorAll(".product-details h3");
-search.addEventListener("keyup", e => {
-  const text = e.target.value.toLowerCase();
-  productName.forEach(product => {
-    const item = product.firstChild.textContent.toLowerCase();
-    product.parentElement.parentElement.style.display = item.includes(text) ? "block" : "none";
-  })
+const productNames = document.querySelectorAll(".product-details h3");
+
+search.addEventListener("input", event => {
+  const searchText = event.target.value.trim().toLowerCase();
+
+  productNames.forEach(product => {
+    const itemName = product.textContent.toLowerCase();
+    const productItem = product.closest(".products");
+
+    if (itemName.includes(searchText)) {
+      productItem.classList.remove("hidden");
+    } else {
+      productItem.classList.add("hidden");
+    }
+  });
 });
 /////////////////////////
 /////dynamic-page content
 const navItems = document.getElementsByClassName('nav-item');
-
 for (let i = 0; i < navItems.length; i++) {
   navItems[i].addEventListener('click', () => {
     for (let j = 0; j < navItems.length; j++)
       navItems[j].classList.remove('active');
-
     navItems[i].classList.add('active');
   });
 }
@@ -31,7 +36,7 @@ const navigateTo = target => {
   document.querySelector(`#${target}`).classList.remove('hidden')
 }
 
-const buttons = Array.from(document.querySelectorAll('.nav-item'))
+const buttons = Array.from(document.querySelectorAll('.footer-item'))
 buttons.forEach(button => {
   // প্রতিটি বাটনের ক্লিকের জন্য শুনুন।
   button.addEventListener('click', () => {
