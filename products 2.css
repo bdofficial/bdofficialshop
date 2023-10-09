@@ -4,8 +4,8 @@
   font-size: 4rem;
   text-align:center;
   width: 98.6%;
-  padding-top:0.8rem;
-  padding-bottom:0.8rem;
+  padding-top:1rem;
+  padding-bottom:1rem;
 }
 
 #quantity {
@@ -25,15 +25,11 @@ width: 98.6%;
 
 #subcart {
   color:#ffffff;
-  background: linear-gradient(
-  145deg,
-  gold,
-  purple,
-  purple);
+  background-color:rgb(238, 88, 62); 
   font-size: 4rem;
   margin-top: 0;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
   width: 96.5vw;
 }
 
@@ -46,7 +42,7 @@ width: 98.6%;
 }
 
 .product-details {
-  margin-top: -.27rem;
+  margin-top: -0.27rem;
 }
 
 #section-1 {
