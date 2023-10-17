@@ -135,11 +135,6 @@ main {
   background-color: lightgray;
 }
 
-img {
-  max-width: 80%;
-  max-height: 70vh;
-}
-
 .page {
   padding-top: 0rem;
 }
