@@ -1,0 +1,36 @@
+table {
+  margin-left: 0%;
+  border-collapse: collapse;
+  width: 100%;
+  background-color: #0F9CD6;
+    }
+    th,
+    td {
+      padding: 5px;
+      border: 1px solid black;
+    }
+
+th {
+  font-size: 3rem;
+}
+
+tbody input {
+  border: none;
+  outline: none;
+  background-color: #0F9CD6;
+  text-align: center;
+  background-size: #0F9CD600;
+  font-size: 2rem;
+  width: 100%;
+}
+
+
+#cart{
+  border: none;
+  outline: none;
+  font-size: 3rem;
+  width: 99.6%;
+  background-color: #0F9CD6;
+  text-align: center;
+}
+

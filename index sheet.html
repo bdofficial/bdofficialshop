@@ -347,29 +347,63 @@
 
 <!-- section -->
   <section id="section-2" class="hidden page">
-
+  <table>
+        <thead>
+          <tr>
+            <th>Details</th>
+            <th>Quantity</th>
+            <th>Price</th>
+          </tr>
+        </thead>
+        <tbody id="inputs"></tbody>
+      </table>
+    
+      <div id="cart-container" style="display: none;">
+        <input id="cart" readonly></input>
+      </div>
+   <input id="room" hidden></input>
   <!-- product -->
   <center>
-   <div class="cartproducts">
-     <img id="cartimg" loading="lazy" src="/2.jpeg"></img>
-     <div class="cartproduct-details">
-       <form class="cartitem-form">
-         <input name="details" class="cartdetails" id="cartdetails" value="T-SHIRT-WHITE 2TK" disabled></br>
-         ➖<input style="width:24rem" name="cartquantity" class="cartquantity" id="cartquantity" type="number">➕</br>
+   <div class="products" style="display: inline-block;width: 49%;
+   margin: 0.2rem;">
+     <img style="min-width: 25rem;
+     width: auto;
+     height: auto;
+     margin-top: 0.8rem;
+     border: 1rem solid white;" id="img" loading="lazy" src="/2.jpeg"></img>
+     <div class="product-details">
+       <form class="item-form">
+         <input style="width:26.5rem" name="details" class="details" id="details" value="T-SHIRT-WHITE 2TK" disabled></br>
+         ➖<input style="width:24rem" name="quantity" class="quantity" id="quantity" type="number">➕</br>
          <input style="width:27.3rem;background: linear-gradient(
          145deg,
          gold,
          purple,
          purple
-         );" id="cartsubcart" value="PRICE:950TK" type="submit" />
+         );" id="subcart" value="PRICE:950TK" type="submit" />
        </form>
      </div>
    </div>
+  <!-- product -->
     <!-- product -->
-
+    <div class="products" style="display: inline-block;width: 49%;
+    margin: 0.2rem;">
+      <img style="min-width: 25rem;
+       width: auto;
+       height: auto;
+       margin-top: 0.8rem;
+       border: 1rem solid white;" id="img" loading="lazy" src="/3.jpeg"></img>
+      <div class="product-details">
+        <form class="item-form">
+          <input style="width:26.5rem" name="details" class="details" id="details" value="T-SHIRT-WHITE 2TK" disabled></br>
+          ➖<input style="width:24rem" name="quantity" class="quantity" id="quantity" type="number">➕</br>
+          <input style="width:27.3rem" id="subcart" value="PRICE:950TK" type="submit" />
+        </form>
+      </div>
+    </div>
+    </center>
     <!-- product -->
- </center>
- </section>
+  </section>
   
   
   
