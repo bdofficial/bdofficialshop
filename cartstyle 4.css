@@ -1,0 +1,32 @@
+.cart ul {
+  margin-left: -2.5rem;
+  background-color: red;
+}
+
+.cart {
+  margin: 0rem;
+  outline: none;
+  display:inline;
+}
+.cart h2,p {
+  font-size: 5rem;
+  display:inline;
+}
+
+.cart input {
+  font-size: 2rem;
+  text-align: center;
+}
+.cart button {
+  font-size: 5rem;
+}
+.cart ul {
+  margin: 0;
+  padding: 0;
+  text-align: center; /* Add this to center the content */
+  background-color: red;
+}
+
+.cloned-product .subcart {
+   display: none;
+}

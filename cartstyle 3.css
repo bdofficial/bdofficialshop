@@ -1,0 +1,25 @@
+.cart ul {
+  margin-left: -2.5rem;
+  background-color: red;
+}
+
+.cart {
+  margin: 0rem;
+  outline: none;
+  display:inline;
+}
+.cart h2,p {
+  font-size: 5rem;
+  display:inline;
+}
+
+.cart input {
+  font-size: 2rem;
+}
+.cart button {
+  font-size: 5rem;
+}
+.cart ul {
+  margin-left: -2.5rem;
+  background-color: red;
+}

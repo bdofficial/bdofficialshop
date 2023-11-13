@@ -1,35 +1,62 @@
-.cart {
-  margin: 0; /* Remove any default margin */
-  outline: none;
-  text-align: center; /* Center the content horizontally */
+#section-2 {
+display: grid;
+      background-color: yellow;
+      grid-template-columns: 1fr; /* Two equal columns */
+    }
+.cart img {
+  width: 100vw;
+  height: auto;
+  object-fit: contain;
+  margin-top: 0.8rem;
+  border: 1rem solid white;
+}
+.cart .details {
+  width: 100%;
+}
+.cart .quantity-grid input {
+  color:red;
+  background-color: green;
+  height: 4rem;
+  font-size: 3.5rem;
+  text-align:center;
+  width: 6.6rem;
 }
 
-.cart h2, .cart p {
-  font-size: 5rem;
+.cart {
+  margin: 0rem;
+  outline: none;
   display: inline;
+  text-align: center;
+}
+.cart ul {
+  margin-left: -2.5rem;
+  background-color: red;
+}
+
+.cart h2,p {
+  font-size: 5rem;
+  display:inline;
 }
 
 .cart input {
   font-size: 2rem;
   text-align: center;
 }
-
 .cart button {
   font-size: 5rem;
 }
-
 .cart ul {
-  margin: 0; /* Remove default margin for the ul */
-  padding: 0; /* Remove default padding for the ul */
-  list-style: none; /* Remove default list styles (bullets) */
+  margin: 0;
+  padding: 0;
+  text-align: center;
   background-color: red;
 }
 
-.cart ul li {
-  display: inline; /* Display list items horizontally */
-  margin-right: 5px; /* Add spacing between list items if needed */
+.cloned-product .subcart {
+   display: none;
 }
-
-  .cart .subcart {
-    display: none;
-  }
+ul {
+  display: grid;
+      background-color: yellow;
+      grid-template-columns: 1fr 1fr; /* Two equal columns */
+}
