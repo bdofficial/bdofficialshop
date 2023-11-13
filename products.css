@@ -2,7 +2,7 @@ img {
   max-width: 80%;
   max-height: 70vh;
 }
-#details {
+.details {
   color: black;
   background-color: white; 
   font-size: 4rem;
@@ -29,7 +29,7 @@ width: 98.6%;
   margin: 0.2rem;
 }
 
-#subcart {
+.subcart,#subcart {
   color:#ffffff;
   background: linear-gradient(
   145deg,
@@ -43,7 +43,7 @@ width: 98.6%;
   width: 96.5vw;
 }
 
-#img {
+.products img {
   min-width: 93vw;
   width: auto;
   height: auto;

@@ -1,119 +1,126 @@
-    const inputtt = document.querySelectorAll('.item-form input[name="quantity"]');
-    inputtt.forEach(input => {
-      input.addEventListener('input', function () {
-        input.value = input.value.replace(/-/g, '');
-      });
-    });
+        // JavaScript functions
+        let cart = [];
+        let roomDetails = [];
 
-    var items = []; 
-    var total = 0; 
+        function addToCart(event, form) {
+            event.preventDefault(); // Prevent form submission
 
-    const forms = document.querySelectorAll('.item-form');
-    const inputsTable = document.getElementById('inputs');
+            // Extract details from the form
+            const detailsInput = form.querySelector('.details');
+            const detailsValue = detailsInput.value;
+            const parts = detailsValue.split(" ");
+            const item = parts[0];
+            const price = parseFloat(parts[parts.length - 1]);
 
-    forms.forEach(form => {
-      form.addEventListener('submit', (event) => {
-        event.preventDefault(); // prevent form submission
+            // Use product details to identify each product
+            const productDetails = form.closest('.products').getAttribute('data-product-details');
 
-        const quantityInput = form.querySelector('input[name="quantity"]');
-        const detailsInput = form.querySelector('input[name="details"]');
-        const quantityValue = quantityInput.value;
-        const detailsValue = detailsInput.value;
-
-        if (quantityValue === ' ' || quantityValue === '' || quantityValue === '0' || detailsValue === '') {
-          return;
+            // Check if the product is already in the cart
+            const existingProduct = cart.find(item => item.details === productDetails);
+            if (existingProduct) {
+                existingProduct.quantity++;
+            } else {
+                cart.push({
+                    name: item,
+                    price: price,
+                    details: productDetails,
+                    quantity: 1
+                });
+            }
+            updateCart();
         }
 
-        // Get the item, price, and quantity from the input fields
-        const parts = detailsValue.split(" ");
-        const item = parts[0];
-        const price = parseFloat(parts[1]);
+        function removeFromCart(index) {
+            cart.splice(index, 1);
+            updateCart();
+        }
 
-        // Create a new row for the input data
-        const newRow = document.createElement('tr');
+        function updateCart() {
+            const cartItems = document.getElementById("cartItems");
+            const cartTotal = document.getElementById("cartTotal");
+            let total = 0;
 
-        // Create cells for details, quantity, and total
-        const detailsCell = document.createElement('td');
-        const detailsInputCell = document.createElement('input');
-        detailsInputCell.type = 'text';
-        detailsInputCell.value = detailsValue;
-        detailsInputCell.readOnly = true;
-        detailsCell.appendChild(detailsInputCell);
+            cartItems.innerHTML = "";
 
-        const quantityCell = document.createElement('td');
-        const quantityInputCell = document.createElement('input');
-        quantityInputCell.type = 'number';
-        quantityInputCell.value = quantityValue;
-        quantityInputCell.min = 1;
-        quantityInputCell.addEventListener('input', updateQuantity);
-        quantityCell.appendChild(quantityInputCell);
+            cart.forEach((item, index) => {
+                const listItem = document.createElement("li");
+                listItem.className = "products";
+                const productDiv = document.querySelector(`[data-product-details="${item.details}"]`);
+                const productClone = productDiv.cloneNode(true);
+                productClone.className = "cloned-product";
 
-        const totalCell = document.createElement('td');
-        const totalInputCell = document.createElement('input');
-        totalInputCell.type = 'text';
-        totalInputCell.value = calculateItemTotal(quantityValue, price) + 'TK';
-        totalInputCell.readOnly = true;
-        totalCell.appendChild(totalInputCell);
+                const buttons = productClone.getElementsByTagName('button');
+                if (buttons.length > 0) {
+                    buttons[0].remove();
+                }
 
-        // Append cells to the new row
-        newRow.appendChild(detailsCell);
-        newRow.appendChild(quantityCell);
-        newRow.appendChild(totalCell);
+                const quantityGrid = document.createElement("div");
+                quantityGrid.className = "quantity-grid";
 
-        // Append the new row to the inputsTable
-        inputsTable.appendChild(newRow);
+                const minusButton = document.createElement("button");
+                minusButton.textContent = "-";
+                minusButton.onclick = () => updateQuantity(index, item.quantity - 1);
 
-        // Add the item, price, and quantity to the items array
-        items.push({
-          item,
-          price,
-          quantity: parseInt(quantityValue),
-          quantityInput: quantityInputCell,
-          totalInput: totalInputCell
-        });
+                const quantityInput = document.createElement("input");
+                quantityInput.type = "number";
+                quantityInput.value = item.quantity;
+                quantityInput.oninput = (event) => updateQuantity(index, event.target.value);
 
-        // Calculate the total price
-        total = calculateTotalPrice();
-        updateTotalPrice();
+                const plusButton = document.createElement("button");
+                plusButton.textContent = "+";
+                plusButton.onclick = () => updateQuantity(index, item.quantity + 1);
 
-        // Clear the input fields
-        quantityInput.value = "";
+                quantityGrid.appendChild(minusButton);
+                quantityGrid.appendChild(quantityInput);
+                quantityGrid.appendChild(plusButton);
 
-        // Show the cart container
-        const cartContainer = document.getElementById('cart-container');
-        cartContainer.style.display = 'block';
-      });
-    });
+                productClone.appendChild(quantityGrid);
 
-    function updateQuantity(event) {
-      const input = event.target;
-      const itemIndex = Array.from(inputsTable.children).indexOf(input.parentElement.parentElement);
-      const item = items[itemIndex];
-      item.quantity = parseInt(input.value);
-      item.totalInput.value = calculateItemTotal(item.quantity, item.price) + 'TK';
+                listItem.appendChild(productClone);
+                const removeButton = document.createElement("button");
+                removeButton.textContent = "Remove from Cart";
+                removeButton.onclick = () => removeFromCart(index);
+                listItem.appendChild(removeButton);
+                cartItems.appendChild(listItem);
+                total += item.price * item.quantity;
+            });
 
-      // Recalculate the total price
-      total = calculateTotalPrice();
-      updateTotalPrice();
-    }
+            cartTotal.textContent = total.toFixed(2);
+            updateCartDetails();
+        }
 
-    function calculateItemTotal(quantity, price) {
-      const parsedQuantity = parseFloat(quantity);
-      if (isNaN(parsedQuantity) || parsedQuantity < 0) {
-        return 0;
-      }
-      return parsedQuantity * price;
-    }
+        function updateQuantity(index, newQuantity) {
+            const parsedQuantity = parseInt(newQuantity);
+            if (!isNaN(parsedQuantity) && parsedQuantity > 0) {
+                cart[index].quantity = parsedQuantity;
+                updateCart();
+            }
+        }
 
-    function calculateTotalPrice() {
-      let totalPrice = 0;
-      for (let i = 0; i < items.length; i++) {
-        totalPrice += calculateItemTotal(items[i].quantity, items[i].price);
-      }
-      return totalPrice;
-    }
+        function updateCartDetails() {
+            roomDetails = cart.map(item => {
+                return {
+                    details: item.details,
+                    price: item.price,
+                    quantity: item.quantity
+                };
+            });
+        }
 
-    function updateTotalPrice() {
-      const cartInput = document.getElementById("cart");
-      cartInput.value = "TOTAL: " + total + "TK";
-    }
+        function copyToRoom() {
+            const roomInput = document.getElementById("room");
+
+            roomInput.value = ""; // Clear the room input
+
+            roomDetails.forEach(item => {
+                const details = item.details;
+                const quantity = item.quantity;
+                const total = parseInt(calculateItemTotal(quantity, item.price)) + "TK";
+                roomInput.value += "Details: " + details + ", Quantity: " + quantity + ", Price: " + total + ".\n";
+            });
+            roomInput.value += "TOTAL: " + cartTotal.textContent + "TK";
+        }
+
+        function calculateItemTotal(quantity, price) {
+            return (quantity * price).toFixed(2);
+        }
