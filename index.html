@@ -26,11 +26,11 @@
 <!--------------PRODUCTS------------->
 <!--------------PRODUCTS------------->
 <!--------------PRODUCTS------------->
-        <div class="products" data-product-details="SHIRT-WHITE 10TK">
+        <div class="products" data-product-details="SHIRT-WHITE">
             <img loading="lazy"
                 src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRaaoCUyIVeXQEd2BYa_p5DbUHWDB3sDO6oZg&usqp=CAU">
             <div class="product-details">
-                <h3 hidden>SHIRT-WHITE 10TK</h3>
+                <h1 hidden>SHIRT-WHITE</h1>
                 <form class="item-form" onsubmit="addToCart(event, this)">
                     <input name="details" class="details" value="SHIRT-WHITE 10TK" disabled><br>
                     <input class="subcart" value="SUBMIT" type="submit" />
@@ -357,30 +357,16 @@
 
 
 <!-- section -->
-  <section id="section-2" class="hidden page">
+<section id="section-2" class="hidden page">
+  <div class="cart">
+    <p>Total: $<span id="cartTotal">0.00</span></p>
+    <h2>Cart</h2>
+    <ul id="cartItems"></ul>
+    <input id="room" placeholder="Enter Room Details"></input>
+    <button onclick="copyToRoom()">Copy to Room</button>
+  </div>
+</section>
 
-  <!-- product -->
-  <center>
-   <div class="cartproducts">
-     <img id="cartimg" loading="lazy" src="/2.jpeg"></img>
-     <div class="cartproduct-details">
-       <form class="cartitem-form">
-         <input name="details" class="cartdetails" id="cartdetails" value="T-SHIRT-WHITE 2TK" disabled></br>
-         <k>➖</k><input name="cartquantity" class="cartquantity" id="cartquantity" type="number"><k>➕</k></br>
-         <input style="background: linear-gradient(
-         145deg,
-         gold,
-         purple,
-         purple
-         );" id="cartsubcart" value="PRICE:950TK" type="submit" />
-       </form>
-     </div>
-   </div>
-    <!-- product -->
-
-    <!-- product -->
- </center>
- </section>
   
   
   
@@ -467,7 +453,7 @@
           👤
       </i>
       <div class="footer-text">
-      <input type="button" value="SAVE" onclick="sendMessage()" id="sendcookies"/>
+      <input type="button" value="SAVE" onclick="sendMessage()" id="sendcookie"/>
       </div>
   </div>
 </footer>

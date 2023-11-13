@@ -1,9 +1,9 @@
 const search = document.getElementById("search");
-const productNames = document.querySelectorAll(".product-details h3");
-
+const productNames = document.querySelectorAll(".product-details h1"); 
+ 
 search.addEventListener("input", event => {
   const searchText = event.target.value.trim().toLowerCase();
-
+ 
   productNames.forEach(product => {
     const itemName = product.textContent.toLowerCase();
     const productItem = product.closest(".products");
