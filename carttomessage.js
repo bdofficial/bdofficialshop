@@ -4,7 +4,6 @@ function copyTextarea() {
   document.getElementById("my-input").value += input;
   submitMessage();
   document.getElementById("room").value = "";
-  roomInput.value="";
 }
 /////
 ///////////iframe chat submit & scrool
