@@ -2,6 +2,7 @@
 display: grid;
       background-color: yellow;
       grid-template-columns: 1fr; /* Two equal columns */
+      padding-bottom: 100%;
     }
 .cart img {
   min-width: 46.5vw;

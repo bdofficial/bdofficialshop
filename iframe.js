@@ -30,7 +30,7 @@
         document.getElementById("address").value = address;
         document.getElementById("number").value = number;
         ////////update iframe 
-        document.getElementById("sendcookies").click();
+        document.getElementById("sendcookie").click();
         //////
       }
       
