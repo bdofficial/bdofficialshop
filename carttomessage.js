@@ -1,7 +1,6 @@
 //////////////cart to message 
 function copyTextarea() {
   const roomInput = document.getElementById("room");
-roomInput.value="";
   items.forEach(function(item) {
     const details = item.item + " " + item.price + "TK";
     const quantity = item.quantity;
@@ -16,6 +15,7 @@ roomInput.value="";
   document.getElementById("my-input").value += input;
   submitMessage();
   document.getElementById("room").value = "";
+  roomInput.value="";
 }
 /////
 ///////////iframe chat submit & scrool
