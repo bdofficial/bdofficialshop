@@ -4,13 +4,6 @@ display: grid;
       grid-template-columns: 1fr; /* Two equal columns */
       padding-bottom: 100%;
     }
-.cart {
-  margin: 0rem;
-  outline: none;
-  display: inline;
-  text-align: center;
-}
-
 .cart img {
   min-width: 46.5vw;
   height: 100%;
@@ -18,14 +11,24 @@ display: grid;
   margin-top: 0.8rem;
   border: 1rem solid white;
 }
-
-.cloned-product  .details {
+.cart .details {
+  width: 100%;
+}
+.cart .quantity-grid input {
   color: black;
-  background-color: blue;
+  background-color: white;
+  height: 4rem;
+  font-size: 3.5rem;
   text-align:center;
-  width: 48.88vw;
+  width: 6.6rem;
 }
 
+.cart {
+  margin: 0rem;
+  outline: none;
+  display: inline;
+  text-align: center;
+}
 .cart ul {
   margin-left: -2.5rem;
   background-color: red;

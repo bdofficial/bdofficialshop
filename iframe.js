@@ -31,6 +31,7 @@
         document.getElementById("number").value = number;
         ////////update iframe 
         document.getElementById("sendcookie").click();
+        document.getElementById("homeclick").click();
         //////
       }
       
