@@ -19,13 +19,6 @@ display: grid;
   border: 1rem solid white;
 }
 
-.cloned-product  .details {
-  color: black;
-  background-color: blue;
-  text-align:center;
-  width: 48.88vw;
-}
-
 .cart ul {
   margin-left: -2.5rem;
   background-color: red;
@@ -36,10 +29,6 @@ display: grid;
   display:inline;
 }
 
-.cart input {
-  font-size: 2rem;
-  text-align: center;
-}
 .cart button {
   font-size: 5rem;
 }
@@ -57,4 +46,26 @@ ul {
   display: grid;
       background-color: green;
       grid-template-columns: 1fr 1fr; /* Two equal columns */
+}
+
+.cloned-product .details {
+  color: black;
+  background-color: blue;
+  text-align: center;
+  width: 48.88vw;
+}
+
+.cart input {
+  background-color: darkblue;
+  margin: 0;
+  outline: none;
+  display: inline;
+  text-align: center;
+  width: 42.88vw;
+  font-size: 2rem;
+}
+
+.cart button {
+  font-size: 2rem;
+  background-color: blue;
 }
