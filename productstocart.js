@@ -59,6 +59,7 @@
 
                 const minusButton = document.createElement("button");
                 minusButton.textContent = "-";
+                minusButton.className = "minus";
                 minusButton.onclick = () => updateQuantity(index, item.quantity - 1);
 
                 const quantityInput = document.createElement("input");
@@ -68,6 +69,7 @@
 
                 const plusButton = document.createElement("button");
                 plusButton.textContent = "+";
+                plusButton.className = "plus";
                 plusButton.onclick = () => updateQuantity(index, item.quantity + 1);
 
                 quantityGrid.appendChild(minusButton);
@@ -79,6 +81,7 @@
                 listItem.appendChild(productClone);
                 const removeButton = document.createElement("button");
                 removeButton.textContent = "Remove from Cart";
+                removeButton.className = "remove";
                 removeButton.onclick = () => removeFromCart(index);
                 listItem.appendChild(removeButton);
                 cartItems.appendChild(listItem);
