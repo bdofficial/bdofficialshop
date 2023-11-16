@@ -1,13 +1,9 @@
 //////////////cart to message 
 function copyTextarea() {
   const roomInput = document.getElementById("room");
-  /////
+  
   roomInput.value = ""; // Clear the room input
-   ///
-   function calculateItemTotal(quantity, price) {
-     return (quantity * price);
-   }
-   ////
+  
   roomDetails.forEach(item => {
     const details = item.details;
     const quantity = item.quantity;
@@ -15,17 +11,18 @@ function copyTextarea() {
     roomInput.value += "Details: " + details + ", Quantity: " + quantity + ", Price: " + total + ".\n";
   });
   roomInput.value += "TOTAL: " + cartTotal.textContent + "TK";
+ ///
+  function calculateItemTotal(quantity, price) {
+    return (quantity * price).toFixed(2);
+  }
+  ///
+  var myList = document.getElementById("cartItems");
+  myList.innerHTML = '';
   ////////////////////////////////////////
   var input = document.getElementById("room").value;
   document.getElementById("my-input").value += input;
   submitMessage();
-   /////////////
-  document.getElementById("cartItems").innerHTML = "";
-   //////////////////
   document.getElementById("room").value = "";
-  ////////
-  document.getElementById("cartTotal").innerHTML = "00.00";
-  cart.length = 0;
 }
 /////
 ///////////iframe chat submit & scrool

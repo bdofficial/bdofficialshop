@@ -88,7 +88,7 @@
                 total += item.price * item.quantity;
             });
 
-            cartTotal.textContent = parseInt(total.toFixed(2));
+          cartTotal.textContent = parseInt(total);
             updateCartDetails();
         }
 
@@ -109,3 +109,5 @@
                 };
             });
         }
+
+
