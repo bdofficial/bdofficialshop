@@ -1,8 +1,8 @@
 #section-2 {
 display: grid;
-      background-color: yellow;
+      background-color: transparent;
       grid-template-columns: 1fr; /* Two equal columns */
-      padding-bottom: 100%;
+      padding-bottom: 7rem;
     }
 .cart {
   margin: 0rem;
@@ -10,7 +10,13 @@ display: grid;
   display: inline;
   text-align: center;
 }
-
+.cart p {
+  background-color: darkblue;
+  width: 100vw;
+  font-size: 5rem;
+  margin:0;
+  margin-bottom: -0rem;
+}
 .cart img {
   min-width: 46.5vw;
   height: 100%;
@@ -21,10 +27,9 @@ display: grid;
 
 .cart ul {
   margin-left: -2.5rem;
-  background-color: red;
 }
 
-.cart h2,p {
+.cart h2 {
   font-size: 5rem;
   display:inline;
 }
@@ -32,16 +37,18 @@ display: grid;
 .cart button {
   font-size: 5rem;
 }
+
 .cart ul {
   margin: 0;
   padding: 0;
   text-align: center;
-  background-color: red;
+  background-color: transparent;
 }
 
 .cloned-product .subcart {
    display: none;
 }
+
 ul {
   display: grid;
       background-color: green;
@@ -59,6 +66,7 @@ ul {
   display: inline;
   border: 0rem;
   margin-top: -0.93rem;
+  font-size: 2rem;
 }
 
 .cart input {
@@ -67,30 +75,46 @@ ul {
   outline: none;
   text-align: center;
   width: 41.88vw;
-  font-size: 2rem;
+  font-size: 3rem;
+  pointer-events: none;
+  user-select: none;
 }
 
-.remove {
-  background-color: red
+.cart .minus,.plus{
+  position: absolute;
+  outline: none;
+  margin: 0rem;
+  display: inline;
+  border: 0rem;
+  margin-top: 0.1rem;
+  background-color: green;
+  
+}
+
+.cart .minus {
+  font-size: 2rem;
+  height: 3rem;
+  text-align: center;
+  width: 2rem;
+  margin-left: -2.05rem;
 }
 
 .cart .plus {
   font-size: 2rem;
-  background-color: blue;
-  height: 2rem;
+  height: 3rem;
   text-align: center;
-}
-.cart .minus {
-  font-size: 2rem;
-  background-color: blue;
-  height: 2rem;
-  text-align: center;
+  width: 2rem;
 }
 
 .cart .remove {
-  background-color: blue;
-  height:2.8rem;
-  font-size: 2rem;
-  width: 30rem;
-  margin-bottom: 1rem;
+      background-color: darkred;
+      height:2.8rem;
+      font-size: 3rem;
+      width: 30.2rem;
+      outline: none;
+      margin: 0;
+      border: 0;
+      padding-bottom: 1rem;
+      margin-bottom: 1rem;
 }
+

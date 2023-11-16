@@ -1,4 +1,6 @@
 body {
+  touch-action: manipulation;
+   -webkit-tap-highlight-color: transparent;
   display: flex;
   flex-direction: column;
   min-height: 100vh; /* Ensure the body takes up at least the viewport height */
@@ -156,7 +158,8 @@ main{
     height: 100%;
     padding-top: 0rem;
     background-color: #311740;
-    overflow: scroll
+    overflow: scroll;
+    margin-bottom: 8rem;
 }
 
 #section-1 input {
