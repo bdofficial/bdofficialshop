@@ -9,23 +9,36 @@ function copyTextarea() {
    }
    ////
   roomDetails.forEach(item => {
-    const details = item.details;
+    const name = item.name;
     const quantity = item.quantity;
     const total = parseInt(calculateItemTotal(quantity, item.price)) + "TK";
-    roomInput.value += "Details: " + details + ", Quantity: " + quantity + ", Price: " + total + ".\n";
+    roomInput.value +=  "Name: " + name + ", Quantity: " + quantity + ", Price: " + total + ".\n";
   });
-  roomInput.value += "TOTAL: " + cartTotal.textContent + "TK";
+  
+  if (cart.length > 0) {
+  roomInput.value += "TOTAL: " + cartTotal.textContent + "TK.";
+  }
   ////////////////////////////////////////
   var input = document.getElementById("room").value;
   document.getElementById("my-input").value += input;
-  submitMessage();
-   /////////////
+  ///////////////submit
+  const iframe = document.getElementById('chatiframe');
+  const nam = document.getElementById("name").value;
+  const mes = document.getElementById('my-input').value;
+  if (mes === ' ' || mes === '') {
+    return;
+  }
+  const message = "✓" + mes;
+  iframe.contentWindow.postMessage({ message }, '*');
+  document.getElementById('my-input').value = "";
+   /////////////submit
   document.getElementById("cartItems").innerHTML = "";
    //////////////////
-  document.getElementById("room").value = "";
+  roomInput.value = "";
   ////////
   document.getElementById("cartTotal").innerHTML = "00.00";
   cart.length = 0;
+  roomDetails.length = 0;
 }
 /////
 ///////////iframe chat submit & scrool

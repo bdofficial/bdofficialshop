@@ -18,10 +18,10 @@
             // Check if the product is already in the cart
             const existingProduct = cart.find(item => item.details === productDetails);
             if (existingProduct) {
-                existingProduct.quantity++;
+                existingProduct.quantity;
             } else {
                 cart.push({
-                    name: item,
+                    name: detailsValue,
                     price: price,
                     details: productDetails,
                     quantity: 1
@@ -103,7 +103,7 @@
         function updateCartDetails() {
             roomDetails = cart.map(item => {
                 return {
-                    details: item.details,
+                    name: item.name,
                     price: item.price,
                     quantity: item.quantity
                 };
