@@ -7,18 +7,38 @@ function copyTextarea() {
    function calculateItemTotal(quantity, price) {
      return (quantity * price);
    }
-   ////
-  roomDetails.forEach(item => {
-    const name = item.name;
-    const quantity = item.quantity;
-    const total = parseInt(calculateItemTotal(quantity, item.price)) + "TK";
-    roomInput.value +=  "Name: " + name + ", Quantity: " + quantity + ", Price: " + total + ".\n";
+////////
+if (cart.length > 1) {
+let counter = 1;
+roomDetails.forEach(item => {
+      const name = item.name;
+      const quantity = item.quantity;
+      if (quantity == 1) {
+roomInput.value = counter + "." + name + ",\n";
+        counter++;
+      }
+      else {
+      const total = parseInt(calculateItemTotal(quantity, item.price)) + "TK";
+      roomInput.value += counter + "." + name + "~QUANTITY: " + quantity + "~PRICE: " + total + ",\n";
+      counter++;
+      }
   });
-  
-  if (cart.length > 0) {
-  roomInput.value += "TOTAL: " + cartTotal.textContent + "TK.";
+roomInput.value += "TOTAL: " + cartTotal.textContent + "TK.";
   }
-  ////////////////////////////////////////
+//////
+else {
+      const name = roomDetails.map(item => item.name);
+      const quantity = roomDetails.map(item => item.quantity);
+      const price = roomDetails.map(item => item.price);
+      const total = parseInt(calculateItemTotal(quantity, price)) + "TK";
+  if (quantity == 1) {
+    roomInput.value = name + ".";
+  }
+  else {
+    roomInput.value = name + "~QUANTITY: " + quantity + "~TOTAL: " + total + ".";
+  }
+  }
+////////////////////////////////////////////
   var input = document.getElementById("room").value;
   document.getElementById("my-input").value += input;
   ///////////////submit
