@@ -14,7 +14,7 @@ roomDetails.forEach(item => {
       const name = item.name;
       const quantity = item.quantity;
       if (quantity == 1) {
-roomInput.value = counter + "." + name + ",\n";
+roomInput.value += counter + "." + name + ",\n";
         counter++;
       }
       else {
