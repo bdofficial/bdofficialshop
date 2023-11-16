@@ -50,10 +50,15 @@ ul {
 
 .cloned-product .details {
   height: 2.4rem;
-  color: white;
-  background-color: blue;
+  color: darkblue;
+  background-color: white;
   text-align: center;
-  width: 48.88vw;
+  width: 49.4vw;
+  outline: none;
+  margin: 0rem;
+  display: inline;
+  border: 0rem;
+  margin-top: -0.93rem;
 }
 
 .cart input {

@@ -88,7 +88,7 @@
                 total += item.price * item.quantity;
             });
 
-            cartTotal.textContent = total.toFixed(2);
+            cartTotal.textContent = parseInt(total.toFixed(2));
             updateCartDetails();
         }
 
@@ -108,22 +108,4 @@
                     quantity: item.quantity
                 };
             });
-        }
-
-        function copyToRoom() {
-            const roomInput = document.getElementById("room");
-
-            roomInput.value = ""; // Clear the room input
-
-            roomDetails.forEach(item => {
-                const details = item.details;
-                const quantity = item.quantity;
-                const total = parseInt(calculateItemTotal(quantity, item.price)) + "TK";
-                roomInput.value += "Details: " + details + ", Quantity: " + quantity + ", Price: " + total + ".\n";
-            });
-            roomInput.value += "TOTAL: " + cartTotal.textContent + "TK";
-        }
-
-        function calculateItemTotal(quantity, price) {
-            return (quantity * price).toFixed(2);
         }
