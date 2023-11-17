@@ -74,7 +74,7 @@ ul {
   justify-content: space-around;
 }
 
-.cart .quantityadd {
+.quantityadd {
   color: whitesmoke;
   background-color: hsla(60, 100%, 50%, 0.2);
   margin: 0;
@@ -107,14 +107,12 @@ ul {
 .cart .remove {
   color: red;
       background-color: darkred;
-      height:2.8rem;
       font-size: 2.5rem;
       width: 30.588rem;
-      outline: none;
       margin: 0;
       border: 0;
-      padding-bottom: 2.5rem;
+      padding: 0rem;
       margin-bottom: 0rem;
-      height: 3.2rem;
-      font-style: italic
+      font-style: italic;
+      padding-bottom: 0.5rem;
 }
