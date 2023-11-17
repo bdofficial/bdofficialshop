@@ -4,6 +4,7 @@ display: grid;
       grid-template-columns: 1fr; /* Two equal columns */
       padding-bottom: 7.5rem;
     }
+    
 .cart {
   margin: 0rem;
   outline: none;
@@ -11,6 +12,7 @@ display: grid;
   text-align: center;
   margin-top: -5rem;
 }
+
 .cart p {
   background-color: darkblue;
   width: 100vw;
@@ -18,6 +20,7 @@ display: grid;
   margin:0;
   margin-bottom: -0rem;
 }
+
 .cart img {
   min-width: 46.5vw;
   height: 100%;
@@ -115,4 +118,3 @@ ul {
       height: 3.2rem;
       font-style: italic
 }
-
