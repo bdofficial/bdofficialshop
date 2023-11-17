@@ -101,15 +101,17 @@ ul {
 }
 
 .cart .remove {
+  color: red;
       background-color: darkred;
       height:2.8rem;
       font-size: 2.5rem;
-      width: 30.58rem;
+      width: 30.588rem;
       outline: none;
       margin: 0;
       border: 0;
       padding-bottom: 1rem;
       margin-bottom: 0rem;
-      height: 3.5rem;
+      height: 3.2rem;
+      font-style: italic
 }
 

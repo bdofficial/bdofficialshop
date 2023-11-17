@@ -81,7 +81,7 @@ quantityGrid.className = "flex";
 
                 listItem.appendChild(productClone);
                 const removeButton = document.createElement("button");
-                removeButton.textContent = "Remove from Cart";
+          removeButton.textContent = "✕‎ ‎ ";
                 removeButton.className = "remove";
                 removeButton.onclick = () => removeFromCart(index);
                 listItem.appendChild(removeButton);
