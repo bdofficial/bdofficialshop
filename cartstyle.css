@@ -81,12 +81,13 @@ ul {
   font-size: 3rem;
   pointer-events: none;
   user-select: none;
-  height: 4rem;
+  height: 3.4rem;
   border: none;
   margin-top: 0rem;
 }
 
 .cart .minus,.plus{
+  height: 3.4rem;
   width: 6rem;
   outline: none;
   margin: 0rem;
@@ -97,10 +98,6 @@ ul {
   text-align: center;
   margin-top: 0rem;
   font-size: 3rem;
-}
-
-.cart .plus {
-  
 }
 
 .cart .remove {

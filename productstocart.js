@@ -58,7 +58,7 @@
                 quantityGrid.className = "quantity-grid";
 
                 const minusButton = document.createElement("button");
-                minusButton.textContent = "-";
+                minusButton.textContent = "–";
                 minusButton.className = "minus";
                 minusButton.onclick = () => updateQuantity(index, item.quantity - 1);
 
