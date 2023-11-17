@@ -2,13 +2,14 @@
 display: grid;
       background-color: transparent;
       grid-template-columns: 1fr; /* Two equal columns */
-      padding-bottom: 7rem;
+      padding-bottom: 7.5rem;
     }
 .cart {
   margin: 0rem;
   outline: none;
   display: inline;
   text-align: center;
+  margin-top: -5rem;
 }
 .cart p {
   background-color: darkblue;
@@ -109,7 +110,7 @@ ul {
       outline: none;
       margin: 0;
       border: 0;
-      padding-bottom: 1rem;
+      padding-bottom: 2.5rem;
       margin-bottom: 0rem;
       height: 3.2rem;
       font-style: italic

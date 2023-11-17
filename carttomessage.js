@@ -19,7 +19,7 @@ roomInput.value += counter + "." + name + ",\n";
       }
       else {
       const total = parseInt(calculateItemTotal(quantity, item.price)) + "TK";
-      roomInput.value += counter + "." + name + "~QUANTITY: " + quantity + "~PRICE: " + total + ",\n";
+      roomInput.value += counter + "." + name + "∼QUANTITY: " + quantity + "∼PRICE: " + total + ",\n";
       counter++;
       }
   });
@@ -35,7 +35,7 @@ else {
     roomInput.value = name + ".";
   }
   else {
-    roomInput.value = name + "~QUANTITY: " + quantity + "~TOTAL: " + total + ".";
+    roomInput.value = name + "∼QUANTITY: " + quantity + "∼TOTAL: " + total + ".";
   }
   }
 ////////////////////////////////////////////

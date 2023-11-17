@@ -159,7 +159,7 @@ main{
     padding-top: 0rem;
     background-color: #311740;
     overflow: scroll;
-    margin-bottom: 8rem;
+    padding-bottom: 8rem;
 }
 
 #section-1 input {
