@@ -1,3 +1,9 @@
+#section-1 {
+  margin-top: 0rem;
+  padding-top: 0.3rem;
+  padding-bottom: 8.03rem;
+}
+
 img {
   max-width: 80%;
   max-height: 70vh;
@@ -7,7 +13,7 @@ img {
   background-color: white; 
   font-size: 4rem;
   text-align:center;
-  width: 95.7%;
+  width: 95.8%;
   padding-top:0.8rem;
   padding-bottom:0.8rem;
     outline: none;
@@ -27,12 +33,6 @@ width: 98.6%;
 }
 
 
-#section-1 .producs {
-  display: inline-block;
-  width: 97.5vw;
-  margin: 0.2rem;
-}
-
 .subcart,#subcart {
   color:#ffffff;
   background: linear-gradient(
@@ -44,7 +44,9 @@ width: 98.6%;
   margin-top: 0;
   padding-top: 1rem;
   padding-bottom: 1rem;
-  width: 96.5vw;
+  width: 96.35vw;
+  border-end-start-radius: 7px;
+  border-end-end-radius: 7px
 }
 
 #section-1 img {
@@ -56,8 +58,4 @@ width: 98.6%;
 
 .product-details {
   margin-top: -.27rem;
-}
-
-#section-1 {
-  margin-top: 0.2rem;
 }

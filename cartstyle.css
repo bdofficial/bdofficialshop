@@ -81,7 +81,7 @@ ul {
   outline: none;
   padding: 0rem;
   text-align: center;
-  width: 29vw;
+  width: 28.7vw;
   font-size: 3rem;
   pointer-events: none;
   user-select: none;
@@ -92,7 +92,7 @@ ul {
 
 .cart .minus,.plus{
   height: 3.4rem;
-  width: 5.8rem;
+  width: 5.9rem;
   outline: none;
   margin: 0rem;
   display: inline;
@@ -115,4 +115,6 @@ ul {
       margin-bottom: 0rem;
       font-style: italic;
       padding-bottom: 0.46rem;
+      border-end-start-radius: 12px;
+      border-end-end-radius: 12px
 }

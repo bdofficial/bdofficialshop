@@ -1,9 +1,19 @@
+html {
+  overflow: hidden;
+    background-image: url("ba.jpg");
+    background-size: cover;
+    margin-top: 0rem;
+}
 body {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  overflow-y: scroll;
   touch-action: manipulation;
    -webkit-tap-highlight-color: transparent;
   display: flex;
   flex-direction: column;
-  min-height: 100vh; /* Ensure the body takes up at least the viewport height */
+  /* Ensure the body takes up at least the viewport height */
   margin: 0;
 }
 
@@ -137,7 +147,7 @@ li {
 }
 
 main {
-  background-color: lightgray;
+  background-color: transparent;
 }
 
 .page {
@@ -151,18 +161,11 @@ main {
   text-decoration: underline;
 }
 
-main{
-  background-image: url("ba.jpg");
-  background-size: cover;
-  margin-top: 0rem
-}
-
 #section-1 {
     height: 100%;
     padding-top: 0rem;
     background-color: #311740;
     overflow: scroll;
-    padding-bottom: 8rem;
 }
 
 #section-1 input {
@@ -182,6 +185,7 @@ main{
 
 #section-4{
 padding-top: 0%;
+height: 3rem;
 }
 
 #section-4 input{
