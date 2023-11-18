@@ -2,7 +2,7 @@
   display: grid;
   background-color: transparent;
   grid-template-columns: 1fr; /* Two equal columns */
-  padding-bottom: 7rem;
+  padding-bottom: 0rem;
     }
     
 .cart {
@@ -115,6 +115,6 @@ ul {
       margin-bottom: 0rem;
       font-style: italic;
       padding-bottom: 0.46rem;
-      border-end-start-radius: 12px;
+      border-end-start-radius: 1px;
       border-end-end-radius: 12px
 }

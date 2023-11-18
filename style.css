@@ -1,5 +1,6 @@
 html {
-  overflow: hidden;
+    touch-action: none;
+    overflow: hidden;
     background-image: url("ba.jpg");
     background-size: cover;
     margin-top: 0rem;
@@ -40,7 +41,7 @@ main {
 }
 
 footer {
-  position: fixed;
+  position: sticky;
   bottom: 0rem;
   display: flex;
   flex-direction: row;
@@ -152,6 +153,7 @@ main {
 
 .page {
   padding-top: 0rem;
+  padding-bottom: 0rem;
 }
 .hidden {
   display: none !important;
@@ -178,9 +180,9 @@ main {
 }
 
 #section-3{
-  height: calc(100vh - 16rem);
-  padding-top: 0rem;
   background-color: darkcyan;
+  height: 100vh;
+  overflow: scroll;
 }
 
 #section-4{
@@ -226,4 +228,5 @@ height: 3rem;
 #scro{
   width: 100%;
   overflow: scroll;
+  background-color: #311740;
 }
