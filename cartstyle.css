@@ -1,8 +1,8 @@
 #section-2 {
-display: grid;
-      background-color: transparent;
-      grid-template-columns: 1fr; /* Two equal columns */
-      padding-bottom: 7.5rem;
+  display: grid;
+  background-color: transparent;
+  grid-template-columns: 1fr; /* Two equal columns */
+  padding-bottom: 7rem;
     }
     
 .cart {
@@ -21,7 +21,7 @@ display: grid;
 }
 
 .cart img {
-  min-width: 46.5vw;
+  min-width: 44.5vw;
   height: 100%;
   object-fit: contain;
   margin-top: 0.8rem;
@@ -30,6 +30,7 @@ display: grid;
 
 .cart ul {
   margin-left: -2.5rem;
+  padding: 1rem;
 }
 
 .cart h2 {
@@ -39,8 +40,7 @@ display: grid;
 
 .cart ul {
   margin: 0;
-  padding: 0;
-  margin-top: -0.18rem;
+  margin-top: -0.78rem;
   text-align: center;
   background-color: transparent;
 }
@@ -60,7 +60,7 @@ ul {
   color: darkblue;
   background-color: white;
   text-align: center;
-  width: 49.4vw;
+  width: 47.3vw;
   outline: none;
   margin: 0rem;
   display: inline;
@@ -71,7 +71,7 @@ ul {
 
 .flex {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
 }
 
 .quantityadd {
@@ -81,7 +81,7 @@ ul {
   outline: none;
   padding: 0rem;
   text-align: center;
-  width: 30vw;
+  width: 29vw;
   font-size: 3rem;
   pointer-events: none;
   user-select: none;
@@ -92,12 +92,12 @@ ul {
 
 .cart .minus,.plus{
   height: 3.4rem;
-  width: 6rem;
+  width: 5.8rem;
   outline: none;
   margin: 0rem;
   display: inline;
   border: 0rem;
-  background-color: darkblue;
+  background-color: hsla(255, 100%, 40%, 0.5);
   color: white;
   text-align: center;
   margin-top: 0rem;
@@ -106,13 +106,13 @@ ul {
 
 .cart .remove {
   color: red;
-      background-color: darkred;
+      background-color: hsla(0, 100%, 30%, 0.95);
       font-size: 2.5rem;
-      width: 30.588rem;
+      width: 29.41rem;
       margin: 0;
       border: 0;
       padding: 0rem;
       margin-bottom: 0rem;
       font-style: italic;
-      padding-bottom: 0.5rem;
+      padding-bottom: 0.46rem;
 }
