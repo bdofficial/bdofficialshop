@@ -165,23 +165,27 @@ main {
 }
 
 #section-3{
-  height: 88.6dvh;
+  height: 100%;
   background-color: darkcyan;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 
 #section-4{
 padding-top: 0%;
 height: 0vh;
+
 }
 
 iframe {
+  margin: 0;
   background-color: transparent;
-  height: 95%;
+  height: 100%;
   width: 100%;
   border: none;
   outline: none;
-  margin-top: -1rem
+  margin-top: 0rem;
 }
 
 #section-4 input{
@@ -207,6 +211,7 @@ iframe {
  }
 
 #chatroo{
+  margin: 0;
   position: sticky;
   top:0rem;
   font-family: "Jura", serif;
@@ -220,6 +225,6 @@ iframe {
  background-size: 10px 9px;
  color: #f2f3f8;
  font-size: 5rem;
- background-color: darkcyan;
+ background-color: transparent;
  text-align: center;
 }
