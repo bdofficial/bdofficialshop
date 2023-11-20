@@ -3,6 +3,7 @@
   background-color: transparent;
   grid-template-columns: 1fr; /* Two equal columns */
   padding-bottom: 0rem;
+    overflow: scroll;
     }
     
 .cart {
@@ -31,6 +32,7 @@
 .cart ul {
   margin-left: -2.5rem;
   padding: 1rem;
+    overflow: scroll;
 }
 
 .cart h2 {
@@ -43,6 +45,7 @@
   margin-top: -0.78rem;
   text-align: center;
   background-color: transparent;
+    overflow: scroll;
 }
 
 .cloned-product .subcart {
@@ -115,6 +118,6 @@ ul {
       margin-bottom: 0rem;
       font-style: italic;
       padding-bottom: 0.46rem;
-      border-end-start-radius: 1px;
+      border-end-start-radius: 12px;
       border-end-end-radius: 12px
 }

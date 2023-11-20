@@ -1,27 +1,24 @@
 html {
-    touch-action: none;
     overflow: hidden;
     background-image: url("ba.jpg");
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
     background-size: cover;
-    margin-top: 0rem;
-}
+  }
 body {
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  overflow: scroll;
-  touch-action: manipulation;
-  -webkit-tap-highlight-color: transparent;
-  display: flex;
-  flex-direction: column;
-  /* Ensure the body takes up at least the viewport height */
-  margin: 0;
-}
+      touch-action: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      height: 100dvh;
+    }
 
 header {
-    position: sticky;
-    top: 0rem;
-    background-color: #333;
+  text-align: center;
+  padding: 0em;
+  flex-shrink: 0;
+  margin: 0;
     color: #fff;
     padding: 10px;
     font-size: 6.3vw;
@@ -36,12 +33,17 @@ text-align: center;
 
 main {
     flex-grow: 1;
-    padding: 0px;
-    padding-top: 0rem;
+    overflow: scroll;
+    margin: 0;
 }
 
 footer {
-  position: sticky;
+        text-align: center;
+        padding: 0em;
+        flex-shrink: 0;
+        height: 10%;
+        margin: 0;
+  
   bottom: 0rem;
   display: flex;
   flex-direction: row;
@@ -162,31 +164,24 @@ main {
   text-decoration: underline;
 }
 
-#section-1 {
-    height: 100%;
-    padding-top: 0rem;
-    background-color: #311740;
-    overflow: scroll;
-}
-
-#section-1 input {
-  border: none;
-  outline: none
-}
-
-#section-2{
-    padding-top: 0rem;
-}
-
 #section-3{
+  height: 88.6dvh;
   background-color: darkcyan;
-  height: 100vh;
-  overflow: scroll;
+  overflow: hidden;
 }
 
 #section-4{
 padding-top: 0%;
-height: 3rem;
+height: 0vh;
+}
+
+iframe {
+  background-color: transparent;
+  height: 95%;
+  width: 100%;
+  border: none;
+  outline: none;
+  margin-top: -0.6rem
 }
 
 #section-4 input{
@@ -212,6 +207,8 @@ height: 3rem;
  }
 
 #chatroo{
+  position: sticky;
+  top:0rem;
   font-family: "Jura", serif;
   color: white;
   text-shadow:
@@ -222,10 +219,7 @@ height: 3rem;
  background-position: 0 1.06em;
  background-size: 10px 9px;
  color: #f2f3f8;
-}
-
-#scro{
-  width: 100%;
-  overflow: scroll;
-  background-color: #311740;
+ font-size: 5rem;
+ background-color: darkcyan;
+ text-align: center;
 }

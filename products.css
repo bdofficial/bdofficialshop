@@ -1,8 +1,10 @@
 #section-1 {
+  background-color: #311740;
+  overflow: scroll;
   margin-top: 0rem;
   padding-top: 0.3rem;
-  padding-bottom: 1.3rem;
-  height: 100vh;
+  height: 87.4vh;
+  padding-bottom: 1rem;
 }
 
 img {
@@ -33,7 +35,6 @@ text-align:center;
 width: 98.6%;
 }
 
-
 .subcart,#subcart {
   color:#ffffff;
   background: linear-gradient(
@@ -46,8 +47,9 @@ width: 98.6%;
   padding-top: 1rem;
   padding-bottom: 1rem;
   width: 96.35vw;
+  border: none;
   border-end-start-radius: 7px;
-  border-end-end-radius: 7px
+  border-end-end-radius: 7px;
 }
 
 #section-1 img {
