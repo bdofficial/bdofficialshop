@@ -1,27 +1,22 @@
+/////search-products 
 const search = document.getElementById("search");
-const productNames = document.querySelectorAll(".product-details h1"); 
- 
-search.addEventListener("input", event => {
-  const searchText = event.target.value.trim().toLowerCase();
- 
-  productNames.forEach(product => {
-    const itemName = product.textContent.toLowerCase();
-    const productItem = product.closest(".products");
-
-    if (itemName.includes(searchText)) {
-      productItem.classList.remove("hidden");
-    } else {
-      productItem.classList.add("hidden");
-    }
-  });
+const productName = document.querySelectorAll(".product-details h3");
+search.addEventListener("keyup", e => {
+  const text = e.target.value.toLowerCase();
+  productName.forEach(product => {
+    const item = product.firstChild.textContent.toLowerCase();
+    product.parentElement.parentElement.style.display = item.includes(text) ? "block" : "none";
+  })
 });
 /////////////////////////
 /////dynamic-page content
 const navItems = document.getElementsByClassName('nav-item');
+
 for (let i = 0; i < navItems.length; i++) {
   navItems[i].addEventListener('click', () => {
     for (let j = 0; j < navItems.length; j++)
       navItems[j].classList.remove('active');
+
     navItems[i].classList.add('active');
   });
 }
@@ -36,7 +31,7 @@ const navigateTo = target => {
   document.querySelector(`#${target}`).classList.remove('hidden')
 }
 
-const buttons = Array.from(document.querySelectorAll('.footer-item'))
+const buttons = Array.from(document.querySelectorAll('i'))
 buttons.forEach(button => {
   // প্রতিটি বাটনের ক্লিকের জন্য শুনুন।
   button.addEventListener('click', () => {
@@ -46,3 +41,15 @@ buttons.forEach(button => {
     button.classList.add('active')
   })
 });
+///////////iframe chat & scrool
+function submitMessage() {
+  const iframe = document.getElementById('chatiframe');
+  const nam = document.getElementById("name").value;
+  const mes = document.getElementById('my-input').value;
+  const message = nam + ":" + mes;
+  iframe.contentWindow.postMessage({ message }, '*');
+  document.getElementById('my-input').value = "";
+}
+///////
+
+
