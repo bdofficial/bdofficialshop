@@ -23,7 +23,7 @@ roomInput.value += counter + "." + name + " 1 PEICE,";
       counter++;
       }
   });
-roomInput.value += "TOTAL: " + cartTotal.textContent + "TK.";
+roomInput.value += "TOTAL: " + cartTotal.textContent + "TK";
   }
 //////
 else {
@@ -32,10 +32,10 @@ else {
       const price = roomDetails.map(item => item.price);
       const total = parseInt(calculateItemTotal(quantity, price)) + "TK";
   if (quantity == 1) {
-    roomInput.value = name + " 1 PEICE.";
+    roomInput.value = name + " 1 PEICE";
   }
   else {
-    roomInput.value = name + " " + quantity + " PEICE " + total + ".";
+    roomInput.value = name + " " + quantity + " PEICE " + total;
   }
   }
 ////////////////////////////////////////////
