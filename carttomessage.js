@@ -14,12 +14,12 @@ roomDetails.forEach(item => {
       const name = item.name;
       const quantity = item.quantity;
       if (quantity == 1) {
-roomInput.value += counter + "." + name + ",\n";
+roomInput.value += counter + "." + name + " 1 PEICE,";
         counter++;
       }
       else {
       const total = parseInt(calculateItemTotal(quantity, item.price)) + "TK";
-      roomInput.value += counter + "." + name + "∼QUANTITY: " + quantity + "∼PRICE: " + total + ",\n";
+      roomInput.value += counter + "." + name + " " + quantity + " PEICE " + total + ",";
       counter++;
       }
   });
@@ -32,10 +32,10 @@ else {
       const price = roomDetails.map(item => item.price);
       const total = parseInt(calculateItemTotal(quantity, price)) + "TK";
   if (quantity == 1) {
-    roomInput.value = name + ".";
+    roomInput.value = name + " 1 PEICE.";
   }
   else {
-    roomInput.value = name + "∼QUANTITY: " + quantity + "∼TOTAL: " + total + ".";
+    roomInput.value = name + " " + quantity + " PEICE " + total + ".";
   }
   }
 ////////////////////////////////////////////
@@ -48,7 +48,7 @@ else {
   if (mes === ' ' || mes === '') {
     return;
   }
-  const message = "✓" + mes;
+  const message = "✓ORDER: " + mes;
   iframe.contentWindow.postMessage({ message }, '*');
   document.getElementById('my-input').value = "";
    /////////////submit
@@ -64,12 +64,12 @@ else {
 ///////////iframe chat submit & scrool
 function submitMessage() {
   const iframe = document.getElementById('chatiframe');
-  const nam = document.getElementById("name").value;
+  const nam = document.getElementById("name").value.toUpperCase();
   const mes = document.getElementById('my-input').value;
   if (mes === ' ' || mes === '') {
     return;
   }
-  const message = "𖦹 " + mes;
+  const message = "@" + nam + ": " + mes;
   iframe.contentWindow.postMessage({ message }, '*');
   document.getElementById('my-input').value = "";
 }
