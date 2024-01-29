@@ -30,12 +30,12 @@ else {
       const name = roomDetails.map(item => item.name);
       const quantity = roomDetails.map(item => item.quantity);
       const price = roomDetails.map(item => item.price);
-      const total = parseInt(calculateItemTotal(quantity, price)) + "TK.";
+      const total = parseInt(calculateItemTotal(quantity, price)) + "TK";
   if (quantity == 1) {
     roomInput.value = name + " 1 PEICE.";
   }
   else {
-    roomInput.value = name + " " + quantity + " PEICE " + total;
+    roomInput.value = name + " " + quantity + " PEICE " + total + ".";
   }
   }
 ////////////////////////////////////////////
