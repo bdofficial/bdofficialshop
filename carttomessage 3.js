@@ -11,12 +11,10 @@ function copyTextarea() {
 if (cart.length > 1) {
 let counter = 1;
 roomDetails.forEach(item => {
-      const items = item.items;
-      const price = item.price;
       const name = item.name;
       const quantity = item.quantity;
       if (quantity == 1) {
-roomInput.value += counter + "." + items + " 1 PEICE " + price + "TK,";
+roomInput.value += counter + "." + name + " 1 PEICE,";
         counter++;
       }
       else {

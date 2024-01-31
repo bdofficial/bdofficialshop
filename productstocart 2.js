@@ -9,7 +9,7 @@
             const detailsInput = form.querySelector('.details');
             const detailsValue = detailsInput.value;
             const parts = detailsValue.split(" ");
-            const items = parts[0];
+            const item = parts[0];
             const price = parseFloat(parts[parts.length - 1]);
 
             // Use product details to identify each product
@@ -21,7 +21,6 @@
                 existingProduct.quantity;
             } else {
                 cart.push({
-                    items: items,
                     name: detailsValue,
                     price: price,
                     details: productDetails,
@@ -105,7 +104,6 @@ quantityGrid.className = "flex";
         function updateCartDetails() {
             roomDetails = cart.map(item => {
                 return {
-                    items: item.items,
                     name: item.name,
                     price: item.price,
                     quantity: item.quantity
