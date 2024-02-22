@@ -16,7 +16,7 @@ roomDetails.forEach(item => {
       const name = item.name;
       const quantity = item.quantity;
       if (quantity == 1) {
-roomInput.value += counter + "." + name + " 1 PEICE,";
+roomInput.value += counter + "." + items + " 1 PEICE " + price + "TK,";
         counter++;
       }
       else {
